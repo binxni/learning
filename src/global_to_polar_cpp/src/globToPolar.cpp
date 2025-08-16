@@ -28,6 +28,17 @@ public:
         lookahead_points_ = this->declare_parameter<int>("lookahead_points", 20);
         search_window_ = this->declare_parameter<int>("search_window", 10);
 
+        // LaserScan과 동일한 각도 메타데이터 파라미터
+        angle_min_ = this->declare_parameter<double>(
+            "angle_min", -135.0 * M_PI / 180.0);
+        angle_max_ = this->declare_parameter<double>(
+            "angle_max", 135.0 * M_PI / 180.0);
+        num_ranges_ = this->declare_parameter<int>("num_ranges", 1081);
+        double default_increment =
+            (angle_max_ - angle_min_) / static_cast<double>(num_ranges_ - 1);
+        angle_increment_ = this->declare_parameter<double>(
+            "angle_increment", default_increment);
+
         // CSV 파일로부터 전역 경로 불러오기
         if (!loadPathFromCSV(path_csv_file)) {
             RCLCPP_ERROR(this->get_logger(), "Failed to load path from CSV. Shutting down.");
@@ -154,12 +165,12 @@ private:
         auto polar_grid_msg = global_to_polar_cpp::msg::PolarGrid();
         polar_grid_msg.header.stamp = this->get_clock()->now();
         polar_grid_msg.header.frame_id = "base_link"; // 로봇의 지역 좌표계
-        polar_grid_msg.ranges.resize(1081, 0.0f); // 1081개의 요소를 0으로 초기화
+        polar_grid_msg.ranges.assign(num_ranges_, 0.0f);
 
-        // 극좌표 그리드의 각도 범위 정의 (-135도 ~ +135도)
-        const double min_angle_rad = -135.0 * M_PI / 180.0;
-        const double max_angle_rad = 135.0 * M_PI / 180.0;
-        const double angle_increment = (max_angle_rad - min_angle_rad) / (1081.0 - 1.0);
+        // 각도 범위는 LaserScan과 동일하게 사용
+        const double min_angle_rad = angle_min_;
+        const double max_angle_rad = angle_max_;
+        const double angle_increment = angle_increment_;
 
         // 3. 전방 'lookahead_points_' 개수만큼의 경로점을 극좌표 그리드에 채우기
         for (int j = 0; j < lookahead_points_; ++j) {
@@ -182,11 +193,13 @@ private:
             // 경로점이 우리가 원하는 각도 범위 내에 있는지 확인
             if (relative_angle >= min_angle_rad && relative_angle <= max_angle_rad) {
                 // 1081개 배열에서 해당 각도에 맞는 인덱스 계산
-                int index = static_cast<int>(std::round((relative_angle - min_angle_rad) / angle_increment));
+                int index = static_cast<int>(
+                    std::round((relative_angle - min_angle_rad) / angle_increment));
 
-                if (index >= 0 && index < 1081) {
-                    // 해당 인덱스가 비어있거나, 새로 계산된 점이 더 가까우면 거리 값을 업데이트
-                    if (polar_grid_msg.ranges[index] == 0.0f || distance < polar_grid_msg.ranges[index]) {
+                if (index >= 0 && index < static_cast<int>(num_ranges_)) {
+                    // 비어 있거나 더 가까운 거리만 갱신
+                    if (polar_grid_msg.ranges[index] == 0.0f ||
+                        distance < polar_grid_msg.ranges[index]) {
                         polar_grid_msg.ranges[index] = static_cast<float>(distance);
                     }
                 }
@@ -211,6 +224,10 @@ private:
     // 파라미터
     int lookahead_points_;
     int search_window_;
+    double angle_min_;
+    double angle_max_;
+    double angle_increment_;
+    int num_ranges_;
 };
 
 int main(int argc, char** argv)

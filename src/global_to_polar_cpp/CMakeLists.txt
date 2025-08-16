@@ -11,6 +11,7 @@ find_package(std_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
+find_package(message_filters REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 # ===================================================================
@@ -43,6 +44,7 @@ ament_target_dependencies(data_logger_node
   rclcpp
   std_msgs
   sensor_msgs
+  message_filters
 )
 
 # 사용자 정의 메시지 타입 링크
