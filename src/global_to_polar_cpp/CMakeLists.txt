@@ -10,7 +10,10 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
+find_package(geometry_msgs REQUIRED)
 find_package(tf2 REQUIRED)
+find_package(tf2_ros REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 find_package(message_filters REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
@@ -35,6 +38,7 @@ ament_target_dependencies(global_to_polar_node
   rclcpp
   std_msgs
   nav_msgs
+  sensor_msgs
   tf2
 )
 
@@ -44,6 +48,11 @@ ament_target_dependencies(data_logger_node
   rclcpp
   std_msgs
   sensor_msgs
+  nav_msgs
+  geometry_msgs
+  tf2
+  tf2_ros
+  tf2_geometry_msgs
   message_filters
 )
 
@@ -58,6 +67,10 @@ install(TARGETS
   global_to_polar_node
   data_logger_node
   DESTINATION lib/${PROJECT_NAME}
+)
+
+install(DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
 )
 
 ament_export_dependencies(rosidl_default_runtime)
