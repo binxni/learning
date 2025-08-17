@@ -42,9 +42,6 @@ public:
         polar_grid_sub_ = this->create_subscription<PolarGrid>(
             "polar_grid", rclcpp::SystemDefaultsQoS(),
             std::bind(&DataLoggerNode::gridCallback, this, std::placeholders::_1));
-        path_sub_ = this->create_subscription<Path>(
-            "planned_path_with_velocity", rclcpp::SystemDefaultsQoS(),
-            std::bind(&DataLoggerNode::pathCallback, this, std::placeholders::_1));
         path_with_velocity_sub_ = this->create_subscription<PathWithVelocity>(
             "planned_path_with_velocity", rclcpp::SystemDefaultsQoS(),
             std::bind(&DataLoggerNode::pathWithVelocityCallback, this, std::placeholders::_1));
@@ -103,15 +100,6 @@ private:
     void gridCallback(const PolarGrid::ConstSharedPtr &grid)
     {
         latest_grid_ = grid;
-    }
-
-    void pathCallback(const Path::ConstSharedPtr &path)
-    {
-        if (!latest_scan_ || !latest_grid_) {
-            RCLCPP_WARN(this->get_logger(), "Missing cached scan or polar grid. Sample skipped.");
-            return;
-        }
-        syncCallback(latest_scan_, latest_grid_, path);
     }
 
     void pathWithVelocityCallback(const PathWithVelocity::ConstSharedPtr &path)
@@ -262,7 +250,6 @@ private:
     // Subscribers and cached messages
     rclcpp::Subscription<LaserScan>::SharedPtr laser_scan_sub_;
     rclcpp::Subscription<PolarGrid>::SharedPtr polar_grid_sub_;
-    rclcpp::Subscription<Path>::SharedPtr path_sub_;
     rclcpp::Subscription<PathWithVelocity>::SharedPtr path_with_velocity_sub_;
 
     LaserScan::ConstSharedPtr latest_scan_;
