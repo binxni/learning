@@ -101,11 +101,6 @@ private:
             return;
         }
 
-        if (scan->ranges.size() != 1080) {
-            RCLCPP_WARN(this->get_logger(), "LaserScan size %zu != 1080. Sample skipped.", scan->ranges.size());
-            return;
-        }
-
         if (scan->ranges.size() != grid->ranges.size()) {
             RCLCPP_WARN(this->get_logger(),
                         "Range size mismatch: scan %zu vs grid %zu. Sample skipped.",
