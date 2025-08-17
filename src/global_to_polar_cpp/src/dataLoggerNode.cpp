@@ -2,6 +2,7 @@
 #include <sensor_msgs/msg/laser_scan.hpp>
 #include <nav_msgs/msg/path.hpp>
 #include <geometry_msgs/msg/point_stamped.hpp>
+#include <planning_custom_msgs/msg/path_with_velocity.hpp>
 #include <tf2_ros/transform_listener.h>
 #include <tf2_ros/buffer.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
@@ -44,6 +45,9 @@ public:
         path_sub_ = this->create_subscription<Path>(
             "planned_path_with_velocity", rclcpp::SystemDefaultsQoS(),
             std::bind(&DataLoggerNode::pathCallback, this, std::placeholders::_1));
+        path_with_velocity_sub_ = this->create_subscription<PathWithVelocity>(
+            "planned_path_with_velocity", rclcpp::SystemDefaultsQoS(),
+            std::bind(&DataLoggerNode::pathWithVelocityCallback, this, std::placeholders::_1));
 
         RCLCPP_INFO(this->get_logger(), "Data Logger Node initialized. Logging to %s", output_csv_file_.c_str());
     }
@@ -59,6 +63,7 @@ private:
     using LaserScan = sensor_msgs::msg::LaserScan;
     using PolarGrid = global_to_polar_cpp::msg::PolarGrid;
     using Path      = nav_msgs::msg::Path;
+    using PathWithVelocity = planning_custom_msgs::msg::PathWithVelocity;
 
     void writeHeader()
     {
@@ -107,6 +112,30 @@ private:
             return;
         }
         syncCallback(latest_scan_, latest_grid_, path);
+    }
+
+    void pathWithVelocityCallback(const PathWithVelocity::ConstSharedPtr &path)
+    {
+        if (!latest_scan_ || !latest_grid_) {
+            RCLCPP_WARN(this->get_logger(), "Missing cached scan or polar grid. Sample skipped.");
+            return;
+        }
+
+        auto nav_path = std::make_shared<Path>();
+        nav_path->header = path->header;
+        nav_path->poses.reserve(path->points.size());
+        rclcpp::Time start_time = path->header.stamp;
+        for (const auto &pt : path->points) {
+            geometry_msgs::msg::PoseStamped ps;
+            ps.header.frame_id = path->header.frame_id;
+            ps.header.stamp = start_time + rclcpp::Duration::from_seconds(pt.time_from_start);
+            ps.pose.position.x = pt.x;
+            ps.pose.position.y = pt.y;
+            ps.pose.position.z = 0.0;
+            nav_path->poses.push_back(ps);
+        }
+
+        syncCallback(latest_scan_, latest_grid_, nav_path);
     }
 
     void syncCallback(const LaserScan::ConstSharedPtr &scan,
@@ -234,6 +263,7 @@ private:
     rclcpp::Subscription<LaserScan>::SharedPtr laser_scan_sub_;
     rclcpp::Subscription<PolarGrid>::SharedPtr polar_grid_sub_;
     rclcpp::Subscription<Path>::SharedPtr path_sub_;
+    rclcpp::Subscription<PathWithVelocity>::SharedPtr path_with_velocity_sub_;
 
     LaserScan::ConstSharedPtr latest_scan_;
     PolarGrid::ConstSharedPtr latest_grid_;
