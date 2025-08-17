@@ -1,6 +1,0 @@
-{
-  "package_name": "global_to_polar_cpp",
-  "non_idl_tuples": [
-    "/home/yongwoo/sim_ws/src/global_to_polar_cpp:msg/PolarGrid.msg"
-  ]
-}
