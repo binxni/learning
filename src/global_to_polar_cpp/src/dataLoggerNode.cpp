@@ -8,20 +8,20 @@
 
 // Custom message
 #include "global_to_polar_cpp/msg/polar_grid.hpp"
+#include "planning_custom_msgs/msg/path_point_array.hpp"
 
 class DataLoggerNode : public rclcpp::Node
 {
 public:
-    DataLoggerNode() : Node("data_logger_node"), scan_received_(false), grid_received_(false)
+    DataLoggerNode() : Node("data_logger_node"), scan_received_(false), grid_received_(false), path_received_(false)
     {
         // Declare and get parameter for the output CSV file path
-        this->declare_parameter<std::string>("output_csv_file", "datalog.csv");
-        std::string output_csv_file = this->get_parameter("output_csv_file").as_string();
+        output_csv_file_ = this->declare_parameter<std::string>("output_csv_file", "/home/yongwoo/sim_ws/src/global_to_polar_cpp/dataSet/datalog.csv");
 
         // Open the CSV file for writing
-        csv_file_.open(output_csv_file, std::ios::out | std::ios::trunc);
+        csv_file_.open(output_csv_file_, std::ios::out | std::ios::trunc);
         if (!csv_file_.is_open()) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to open output file: %s", output_csv_file.c_str());
+            RCLCPP_ERROR(this->get_logger(), "Failed to open output file: %s", output_csv_file_.c_str());
             rclcpp::shutdown();
             return;
         }
@@ -38,7 +38,11 @@ public:
             "/polar_grid", 10,
             std::bind(&DataLoggerNode::polarGridCallback, this, std::placeholders::_1));
 
-        RCLCPP_INFO(this->get_logger(), "Data Logger Node initialized. Logging to %s", output_csv_file.c_str());
+        path_point_array_sub_ = this->create_subscription<planning_custom_msgs::msg::PathPointArray>(
+            "/path_point_array", 10,
+            std::bind(&DataLoggerNode::pathPointArrayCallback, this, std::placeholders::_1));
+
+        RCLCPP_INFO(this->get_logger(), "Data Logger Node initialized. Logging to %s", output_csv_file_.c_str());
     }
 
     ~DataLoggerNode()
@@ -57,7 +61,14 @@ private:
         }
         // PolarGrid headers (1081 points)
         for (int i = 0; i < 1081; ++i) {
-            csv_file_ << "grid_" << i << (i == 1080 ? "" : ",");
+            csv_file_ << "grid_" << i << ",";
+        }
+        // PathPointArray headers (16 points with x, y, v, yaw)
+        for (int i = 0; i < 16; ++i) {
+            csv_file_ << "x" << (i+1) << ",";
+            csv_file_ << "y" << (i+1) << ",";
+            csv_file_ << "v" << (i+1) << ",";
+            csv_file_ << "yaw" << (i+1) << (i == 15 ? "" : ",");
         }
         csv_file_ << "\n";
     }
@@ -83,10 +94,17 @@ private:
         grid_received_ = true;
     }
 
+    void pathPointArrayCallback(const planning_custom_msgs::msg::PathPointArray::SharedPtr msg)
+    {
+        last_path_ = msg;
+        path_received_ = true;
+        RCLCPP_INFO(this->get_logger(), "Received PathPointArray with %zu points", msg->points.size());
+    }
+
     void writeData()
     {
         // Only write to file if we have received at least one of each message type
-        if (!scan_received_ || !grid_received_) {
+        if (!scan_received_ || !grid_received_ || !path_received_) {
             return;
         }
 
@@ -100,27 +118,49 @@ private:
 
         // Write PolarGrid ranges
         for (size_t i = 0; i < last_grid_->ranges.size(); ++i) {
-            csv_file_ << last_grid_->ranges[i] << (i == last_grid_->ranges.size() - 1 ? "" : ",");
+            csv_file_ << last_grid_->ranges[i] << ",";
+        }
+
+        // Write PathPointArray data (16 points with x, y, v, yaw)
+        for (int i = 0; i < 16; ++i) {
+            if (i < static_cast<int>(last_path_->points.size())) {
+                const auto& point = last_path_->points[i];
+                csv_file_ << point.x << ",";
+                csv_file_ << point.y << ",";
+                csv_file_ << point.velocity << ",";
+                csv_file_ << point.yaw << (i == 15 ? "" : ",");
+            } else {
+                // Pad with zeros for missing points
+                csv_file_ << "0,0,0,0" << (i == 15 ? "" : ",");
+            }
         }
         csv_file_ << "\n";
+        
+        // Flush the buffer to ensure data is written to disk immediately
+        csv_file_.flush();
 
         // Reset flags to ensure we wait for a new pair of messages
         scan_received_ = false;
         grid_received_ = false;
+        path_received_ = false;
     }
 
     // Subscribers
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr laser_scan_sub_;
     rclcpp::Subscription<global_to_polar_cpp::msg::PolarGrid>::SharedPtr polar_grid_sub_;
+    rclcpp::Subscription<planning_custom_msgs::msg::PathPointArray>::SharedPtr path_point_array_sub_;
 
     // Data storage
     sensor_msgs::msg::LaserScan::SharedPtr last_scan_;
     global_to_polar_cpp::msg::PolarGrid::SharedPtr last_grid_;
+    planning_custom_msgs::msg::PathPointArray::SharedPtr last_path_;
     bool scan_received_;
     bool grid_received_;
+    bool path_received_;
 
     // File handling
     std::ofstream csv_file_;
+    std::string output_csv_file_;
 };
 
 int main(int argc, char** argv)

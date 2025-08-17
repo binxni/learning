@@ -1,0 +1,381 @@
+[0.021s] Invoking command in '/home/yongwoo/sim_ws/build/planning_custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yongwoo/sim_ws/install/f1tenth_gym_ros:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros_env) /usr/bin/cmake /home/yongwoo/sim_ws/src/f1tenth_planning_custom_msgs -DCMAKE_INSTALL_PREFIX=/home/yongwoo/sim_ws/install/planning_custom_msgs
+[0.218s] -- The C compiler identification is GNU 11.4.0
+[0.283s] -- The CXX compiler identification is GNU 11.4.0
+[0.356s] -- Detecting C compiler ABI info
+[0.463s] -- Detecting C compiler ABI info - done
+[0.471s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.472s] -- Detecting C compile features
+[0.473s] -- Detecting C compile features - done
+[0.477s] -- Detecting CXX compiler ABI info
+[0.583s] -- Detecting CXX compiler ABI info - done
+[0.589s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.590s] -- Detecting CXX compile features
+[0.590s] -- Detecting CXX compile features - done
+[0.597s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.098s] -- Found Python3: /home/yongwoo/anaconda3/envs/ros_env/bin/python3 (found version "3.10.18") found components: Interpreter 
+[1.265s] -- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)
+[1.369s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.376s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.389s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.402s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.425s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.445s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[1.470s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.525s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.147s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[2.893s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.177s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.248s] -- Found PythonInterp: /home/yongwoo/anaconda3/envs/ros_env/bin/python3 (found suitable version "3.10.18", minimum required is "3.6") 
+[3.251s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[3.279s] -- Found PythonLibs: /home/yongwoo/anaconda3/envs/ros_env/lib/libpython3.10.so (found suitable version "3.10.18", minimum required is "3.5") 
+[3.279s] -- Using PYTHON_EXECUTABLE: /home/yongwoo/anaconda3/envs/ros_env/bin/python3
+[3.279s] -- Using PYTHON_INCLUDE_DIRS: /home/yongwoo/anaconda3/envs/ros_env/include/python3.10
+[3.279s] -- Using PYTHON_LIBRARIES: /home/yongwoo/anaconda3/envs/ros_env/lib/libpython3.10.so
+[3.309s] -- Found PythonExtra: .so  
+[3.701s] -- Using numpy include directory: /home/yongwoo/.local/lib/python3.10/site-packages/numpy/core/include
+[3.726s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.764s] -- Added test 'lint_cmake' to check CMake code style
+[3.769s] -- Added test 'xmllint' to check XML markup files
+[3.775s] -- Configuring done
+[3.845s] [33mCMake Warning at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:166 (add_library):
+[3.846s]   Cannot generate a safe runtime search path for target
+[3.846s]   planning_custom_msgs__rosidl_generator_py because files in some directories
+[3.846s]   may conflict with libraries in implicit directories:
+[3.846s] 
+[3.846s]     runtime library [libpython3.10.so.1.0] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[3.846s]       /home/yongwoo/anaconda3/envs/ros_env/lib
+[3.846s] 
+[3.846s]   Some of these libraries may not be found correctly.
+[3.846s] Call Stack (most recent call first):
+[3.846s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.847s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.847s]   CMakeLists.txt:16 (rosidl_generate_interfaces)
+[3.847s] 
+[3.847s] [0m
+[3.851s] [33mCMake Warning at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:226 (add_library):
+[3.851s]   Cannot generate a safe runtime search path for target
+[3.851s]   planning_custom_msgs__rosidl_typesupport_fastrtps_c__pyext because files in
+[3.851s]   some directories may conflict with libraries in implicit directories:
+[3.852s] 
+[3.852s]     runtime library [libpython3.10.so.1.0] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[3.852s]       /home/yongwoo/anaconda3/envs/ros_env/lib
+[3.852s] 
+[3.852s]   Some of these libraries may not be found correctly.
+[3.852s] Call Stack (most recent call first):
+[3.852s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.853s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.853s]   CMakeLists.txt:16 (rosidl_generate_interfaces)
+[3.854s] 
+[3.854s] [0m
+[3.858s] [33mCMake Warning at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:226 (add_library):
+[3.858s]   Cannot generate a safe runtime search path for target
+[3.858s]   planning_custom_msgs__rosidl_typesupport_introspection_c__pyext because
+[3.858s]   files in some directories may conflict with libraries in implicit
+[3.858s]   directories:
+[3.858s] 
+[3.858s]     runtime library [libpython3.10.so.1.0] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[3.858s]       /home/yongwoo/anaconda3/envs/ros_env/lib
+[3.859s] 
+[3.859s]   Some of these libraries may not be found correctly.
+[3.859s] Call Stack (most recent call first):
+[3.859s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.859s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.859s]   CMakeLists.txt:16 (rosidl_generate_interfaces)
+[3.859s] 
+[3.859s] [0m
+[3.864s] [33mCMake Warning at /opt/ros/humble/share/rosidl_generator_py/cmake/rosidl_generator_py_generate_interfaces.cmake:226 (add_library):
+[3.864s]   Cannot generate a safe runtime search path for target
+[3.864s]   planning_custom_msgs__rosidl_typesupport_c__pyext because files in some
+[3.864s]   directories may conflict with libraries in implicit directories:
+[3.864s] 
+[3.864s]     runtime library [libpython3.10.so.1.0] in /usr/lib/x86_64-linux-gnu may be hidden by files in:
+[3.864s]       /home/yongwoo/anaconda3/envs/ros_env/lib
+[3.864s] 
+[3.864s]   Some of these libraries may not be found correctly.
+[3.864s] Call Stack (most recent call first):
+[3.864s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_execute_extensions.cmake:48 (include)
+[3.864s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:286 (ament_execute_extensions)
+[3.865s]   CMakeLists.txt:16 (rosidl_generate_interfaces)
+[3.865s] 
+[3.865s] [0m
+[3.875s] -- Generating done
+[3.901s] -- Build files have been written to: /home/yongwoo/sim_ws/build/planning_custom_msgs
+[3.921s] Invoked command in '/home/yongwoo/sim_ws/build/planning_custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yongwoo/sim_ws/install/f1tenth_gym_ros:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros_env) /usr/bin/cmake /home/yongwoo/sim_ws/src/f1tenth_planning_custom_msgs -DCMAKE_INSTALL_PREFIX=/home/yongwoo/sim_ws/install/planning_custom_msgs
+[3.925s] Invoking command in '/home/yongwoo/sim_ws/build/planning_custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yongwoo/sim_ws/install/f1tenth_gym_ros:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros_env) /usr/bin/cmake --build /home/yongwoo/sim_ws/build/planning_custom_msgs -- -j8 -l8
+[4.005s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[4.021s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[4.032s] [  3%] Built target ament_cmake_python_copy_planning_custom_msgs
+[4.460s] running egg_info
+[4.485s] creating planning_custom_msgs.egg-info
+[4.486s] writing planning_custom_msgs.egg-info/PKG-INFO
+[4.487s] writing dependency_links to planning_custom_msgs.egg-info/dependency_links.txt
+[4.488s] writing top-level names to planning_custom_msgs.egg-info/top_level.txt
+[4.489s] writing manifest file 'planning_custom_msgs.egg-info/SOURCES.txt'
+[4.564s] reading manifest file 'planning_custom_msgs.egg-info/SOURCES.txt'
+[4.567s] writing manifest file 'planning_custom_msgs.egg-info/SOURCES.txt'
+[4.617s] [  3%] Built target ament_cmake_python_build_planning_custom_msgs_egg
+[5.126s] [  3%] Built target planning_custom_msgs__cpp
+[5.142s] [  5%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/wall_collision__functions.c.o[0m
+[5.148s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[5.148s] [  9%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/path_with_velocity__functions.c.o[0m
+[5.148s] [ 12%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/path_point__functions.c.o[0m
+[5.148s] [ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.148s] [ 14%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.150s] [ 16%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/path_point_array__functions.c.o[0m
+[5.251s] [ 18%] [32m[1mLinking C shared library libplanning_custom_msgs__rosidl_generator_c.so[0m
+[5.375s] [ 18%] Built target planning_custom_msgs__rosidl_generator_c
+[5.398s] [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[5.398s] [ 21%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[5.409s] [ 23%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[6.031s] [ 25%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/wall_collision__type_support.cpp.o[0m
+[6.053s] [ 27%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/path_point__type_support.cpp.o[0m
+[6.062s] [ 29%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/path_with_velocity__type_support.cpp.o[0m
+[6.118s] [ 30%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/wall_collision__type_support.cpp.o[0m
+[6.303s] [ 32%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/wall_collision__type_support.cpp.o[0m
+[6.414s] [ 34%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/wall_collision__type_support.cpp.o[0m
+[6.451s] [ 36%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/wall_collision__type_support.c.o[0m
+[6.496s] [ 38%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/path_point__type_support.cpp.o[0m
+[6.556s] [ 40%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/path_point__type_support.c.o[0m
+[6.568s] [ 41%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/path_with_velocity__type_support.cpp.o[0m
+[6.674s] [ 43%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/path_with_velocity__type_support.c.o[0m
+[6.680s] [ 45%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/path_point_array__type_support.cpp.o[0m
+[6.685s] [ 47%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/wall_collision__type_support_c.cpp.o[0m
+[6.703s] [ 49%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/path_point__type_support.cpp.o[0m
+[6.740s] [ 50%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/path_point_array__type_support.cpp.o[0m
+[6.741s] [ 52%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/path_with_velocity__type_support.cpp.o[0m
+[6.745s] [ 54%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/path_point_array__type_support.c.o[0m
+[6.790s] [ 56%] [32m[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_c.so[0m
+[6.896s] [ 58%] [32m[1mLinking C shared library libplanning_custom_msgs__rosidl_typesupport_introspection_c.so[0m
+[7.045s] [ 60%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/path_point__type_support.cpp.o[0m
+[7.116s] [ 60%] Built target planning_custom_msgs__rosidl_typesupport_c
+[7.139s] [ 61%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/path_with_velocity__type_support.cpp.o[0m
+[7.158s] [ 61%] Built target planning_custom_msgs__rosidl_typesupport_introspection_c
+[7.178s] [ 63%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/path_point_array__type_support.cpp.o[0m
+[7.219s] [ 65%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/path_point__type_support_c.cpp.o[0m
+[7.404s] [ 67%] [32m[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_cpp.so[0m
+[7.626s] [ 69%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/path_with_velocity__type_support_c.cpp.o[0m
+[7.677s] [ 70%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/path_point_array__type_support_c.cpp.o[0m
+[7.716s] [ 72%] [32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/path_point_array__type_support.cpp.o[0m
+[7.947s] [ 72%] Built target planning_custom_msgs__rosidl_typesupport_cpp
+[8.249s] [ 74%] [32m[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[8.324s] [ 76%] [32m[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[8.377s] [ 76%] Built target planning_custom_msgs__rosidl_typesupport_introspection_cpp
+[8.447s] [ 76%] Built target planning_custom_msgs__rosidl_typesupport_fastrtps_c
+[8.449s] [ 78%] [32m[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[8.549s] [ 78%] Built target planning_custom_msgs__rosidl_typesupport_fastrtps_cpp
+[8.572s] [ 78%] Built target planning_custom_msgs
+[8.596s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[9.591s] [ 80%] Built target planning_custom_msgs__py
+[9.627s] [ 81%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_path_point_array_s.c.o[0m
+[9.628s] [ 83%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_path_with_velocity_s.c.o[0m
+[9.629s] [ 85%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_wall_collision_s.c.o[0m
+[9.629s] [ 87%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_path_point_s.c.o[0m
+[9.882s] [ 89%] [32m[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/libplanning_custom_msgs__rosidl_generator_py.so[0m
+[9.981s] [ 89%] Built target planning_custom_msgs__rosidl_generator_py
+[10.012s] [ 90%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[10.013s] [ 92%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[10.020s] [ 94%] [32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[10.245s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[10.245s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[10.252s] [100%] [32m[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[10.368s] [100%] Built target planning_custom_msgs__rosidl_typesupport_introspection_c__pyext
+[10.370s] [100%] Built target planning_custom_msgs__rosidl_typesupport_fastrtps_c__pyext
+[10.385s] [100%] Built target planning_custom_msgs__rosidl_typesupport_c__pyext
+[10.415s] Invoked command in '/home/yongwoo/sim_ws/build/planning_custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yongwoo/sim_ws/install/f1tenth_gym_ros:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros_env) /usr/bin/cmake --build /home/yongwoo/sim_ws/build/planning_custom_msgs -- -j8 -l8
+[10.434s] Invoking command in '/home/yongwoo/sim_ws/build/planning_custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yongwoo/sim_ws/install/f1tenth_gym_ros:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros_env) /usr/bin/cmake --install /home/yongwoo/sim_ws/build/planning_custom_msgs
+[10.449s] -- Install configuration: ""
+[10.451s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/ament_index/resource_index/rosidl_interfaces/planning_custom_msgs
+[10.452s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs
+[10.454s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg
+[10.454s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail
+[10.455s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__functions.c
+[10.455s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__functions.h
+[10.455s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__struct.h
+[10.456s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__struct.h
+[10.456s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__struct.h
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__functions.c
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__functions.c
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__functions.h
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__functions.h
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__type_support.h
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__functions.h
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__type_support.h
+[10.457s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__struct.h
+[10.458s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__functions.c
+[10.458s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__type_support.h
+[10.458s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__type_support.h
+[10.458s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_generator_c__visibility_control.h
+[10.458s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/wall_collision.h
+[10.458s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point.h
+[10.459s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_with_velocity.h
+[10.459s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point_array.h
+[10.466s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/library_path.sh
+[10.466s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/library_path.dsv
+[10.467s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_c.so
+[10.467s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_c.so" to ""
+[10.467s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs
+[10.467s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg
+[10.467s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail
+[10.468s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_fastrtps_c.h
+[10.468s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_fastrtps_c.h
+[10.468s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_fastrtps_c.h
+[10.468s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_fastrtps_c.h
+[10.468s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[10.468s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_c.so
+[10.468s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[10.469s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs
+[10.469s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg
+[10.469s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail
+[10.469s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__traits.hpp
+[10.469s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__type_support.hpp
+[10.470s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__type_support.hpp
+[10.470s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__traits.hpp
+[10.470s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__builder.hpp
+[10.470s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__struct.hpp
+[10.470s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__type_support.hpp
+[10.470s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__type_support.hpp
+[10.470s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__struct.hpp
+[10.471s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__builder.hpp
+[10.471s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__traits.hpp
+[10.471s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__traits.hpp
+[10.471s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__struct.hpp
+[10.471s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__builder.hpp
+[10.472s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__struct.hpp
+[10.472s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__builder.hpp
+[10.472s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[10.472s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point_array.hpp
+[10.473s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/wall_collision.hpp
+[10.473s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_with_velocity.hpp
+[10.473s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point.hpp
+[10.474s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs
+[10.474s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg
+[10.475s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail
+[10.475s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_fastrtps_cpp.hpp
+[10.475s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/dds_fastrtps
+[10.477s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_fastrtps_cpp.hpp
+[10.478s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_fastrtps_cpp.hpp
+[10.478s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_fastrtps_cpp.hpp
+[10.479s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[10.479s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_cpp.so
+[10.479s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[10.479s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs
+[10.479s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg
+[10.480s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail
+[10.480s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_introspection_c.h
+[10.480s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__type_support.c
+[10.480s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__type_support.c
+[10.480s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__type_support.c
+[10.480s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_introspection_c.h
+[10.481s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__type_support.c
+[10.481s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_introspection_c.h
+[10.481s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_introspection_c.h
+[10.481s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[10.481s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_c.so
+[10.482s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_c.so" to ""
+[10.482s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_c.so
+[10.482s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_c.so" to ""
+[10.482s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs
+[10.482s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg
+[10.483s] -- Up-to-date: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail
+[10.483s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__type_support.cpp
+[10.483s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__type_support.cpp
+[10.483s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__type_support.cpp
+[10.483s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_introspection_cpp.hpp
+[10.483s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__type_support.cpp
+[10.483s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_introspection_cpp.hpp
+[10.484s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_introspection_cpp.hpp
+[10.484s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_introspection_cpp.hpp
+[10.484s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_cpp.so
+[10.484s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[10.484s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_cpp.so
+[10.484s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_cpp.so" to ""
+[10.484s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/pythonpath.sh
+[10.485s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/pythonpath.dsv
+[10.485s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs-1.0.0-py3.10.egg-info
+[10.488s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/top_level.txt
+[10.489s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/dependency_links.txt
+[10.489s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/PKG-INFO
+[10.489s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/SOURCES.txt
+[10.489s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs
+[10.490s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/__init__.py
+[10.490s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[10.490s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.490s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg
+[10.490s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/__init__.py
+[10.490s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_point.py
+[10.491s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_wall_collision_s.c
+[10.491s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_with_velocity_s.c
+[10.491s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_point_array_s.c
+[10.492s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_point_array.py
+[10.492s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_point_s.c
+[10.493s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_with_velocity.py
+[10.493s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_wall_collision.py
+[10.494s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_c.c
+[10.494s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[10.494s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.494s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/libplanning_custom_msgs__rosidl_generator_py.so
+[10.496s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.605s] Listing '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs'...
+[10.606s] Compiling '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/__init__.py'...
+[10.606s] Listing '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg'...
+[10.606s] Compiling '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/__init__.py'...
+[10.606s] Compiling '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_point.py'...
+[10.606s] Compiling '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_point_array.py'...
+[10.606s] Compiling '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_path_with_velocity.py'...
+[10.606s] Compiling '/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/msg/_wall_collision.py'...
+[10.615s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[10.617s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.617s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[10.618s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.619s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[10.619s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/python3.10/site-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[10.620s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_py.so
+[10.620s] -- Set runtime path of "/home/yongwoo/sim_ws/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_py.so" to ""
+[10.621s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/WallCollision.idl
+[10.621s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPoint.idl
+[10.621s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathWithVelocity.idl
+[10.622s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPointArray.idl
+[10.622s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/WallCollision.msg
+[10.622s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPoint.msg
+[10.622s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathWithVelocity.msg
+[10.623s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPointArray.msg
+[10.624s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/ament_index/resource_index/package_run_dependencies/planning_custom_msgs
+[10.625s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/ament_index/resource_index/parent_prefix_path/planning_custom_msgs
+[10.625s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/ament_prefix_path.sh
+[10.625s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/ament_prefix_path.dsv
+[10.626s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/path.sh
+[10.626s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/environment/path.dsv
+[10.626s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.bash
+[10.626s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.sh
+[10.627s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.zsh
+[10.627s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.dsv
+[10.628s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/package.dsv
+[10.628s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/ament_index/resource_index/packages/planning_custom_msgs
+[10.630s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_cExport.cmake
+[10.630s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_cExport-noconfig.cmake
+[10.632s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[10.633s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[10.634s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_cppExport.cmake
+[10.634s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[10.635s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[10.635s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cExport.cmake
+[10.636s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[10.636s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cExport.cmake
+[10.637s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[10.637s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[10.637s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[10.637s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cppExport.cmake
+[10.638s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[10.638s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_pyExport.cmake
+[10.638s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_pyExport-noconfig.cmake
+[10.643s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/rosidl_cmake-extras.cmake
+[10.643s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[10.643s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[10.643s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[10.643s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[10.644s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[10.644s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[10.644s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgsConfig.cmake
+[10.644s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgsConfig-version.cmake
+[10.644s] -- Installing: /home/yongwoo/sim_ws/install/planning_custom_msgs/share/planning_custom_msgs/package.xml
+[10.652s] Invoked command in '/home/yongwoo/sim_ws/build/planning_custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/yongwoo/sim_ws/install/f1tenth_gym_ros:/opt/ros/humble CONDA_PROMPT_MODIFIER=(ros_env) /usr/bin/cmake --install /home/yongwoo/sim_ws/build/planning_custom_msgs

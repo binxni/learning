@@ -7,11 +7,13 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(planning_custom_msgs REQUIRED)
 
 # ===================================================================
 # 1. 사용자 정의 메시지 파일
@@ -43,6 +45,7 @@ ament_target_dependencies(data_logger_node
   rclcpp
   std_msgs
   sensor_msgs
+  planning_custom_msgs
 )
 
 # 사용자 정의 메시지 타입 링크
@@ -57,6 +60,7 @@ install(TARGETS
   data_logger_node
   DESTINATION lib/${PROJECT_NAME}
 )
+
 
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()

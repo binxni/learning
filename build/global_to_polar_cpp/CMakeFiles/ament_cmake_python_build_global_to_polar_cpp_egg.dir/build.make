@@ -67,7 +67,7 @@ include CMakeFiles/ament_cmake_python_build_global_to_polar_cpp_egg.dir/compiler
 include CMakeFiles/ament_cmake_python_build_global_to_polar_cpp_egg.dir/progress.make
 
 CMakeFiles/ament_cmake_python_build_global_to_polar_cpp_egg:
-	cd /home/yongwoo/sim_ws/build/global_to_polar_cpp/ament_cmake_python/global_to_polar_cpp && /home/yongwoo/anaconda3/bin/python3 setup.py egg_info
+	cd /home/yongwoo/sim_ws/build/global_to_polar_cpp/ament_cmake_python/global_to_polar_cpp && /home/yongwoo/anaconda3/envs/ros_env/bin/python3 setup.py egg_info
 
 ament_cmake_python_build_global_to_polar_cpp_egg: CMakeFiles/ament_cmake_python_build_global_to_polar_cpp_egg
 ament_cmake_python_build_global_to_polar_cpp_egg: CMakeFiles/ament_cmake_python_build_global_to_polar_cpp_egg.dir/build.make
