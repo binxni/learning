@@ -26,6 +26,7 @@ public:
         dt_              = this->declare_parameter<double>("dt", 0.1);
         forward_only_    = this->declare_parameter<bool>("forward_only", false);
         downsample_step_ = this->declare_parameter<int>("downsample_step", 1);
+        target_frame_    = this->declare_parameter<std::string>("target_frame", "base_link");
 
         label_steps_ = static_cast<size_t>(std::round(horizon_sec_ / dt_));
 
@@ -42,9 +43,6 @@ public:
         polar_grid_sub_ = this->create_subscription<PolarGrid>(
             "polar_grid", rclcpp::SystemDefaultsQoS(),
             std::bind(&DataLoggerNode::gridCallback, this, std::placeholders::_1));
-        path_sub_ = this->create_subscription<Path>(
-            "planned_path_with_velocity", rclcpp::SystemDefaultsQoS(),
-            std::bind(&DataLoggerNode::pathCallback, this, std::placeholders::_1));
         path_with_velocity_sub_ = this->create_subscription<PathWithVelocity>(
             "planned_path_with_velocity", rclcpp::SystemDefaultsQoS(),
             std::bind(&DataLoggerNode::pathWithVelocityCallback, this, std::placeholders::_1));
@@ -103,15 +101,6 @@ private:
     void gridCallback(const PolarGrid::ConstSharedPtr &grid)
     {
         latest_grid_ = grid;
-    }
-
-    void pathCallback(const Path::ConstSharedPtr &path)
-    {
-        if (!latest_scan_ || !latest_grid_) {
-            RCLCPP_WARN(this->get_logger(), "Missing cached scan or polar grid. Sample skipped.");
-            return;
-        }
-        syncCallback(latest_scan_, latest_grid_, path);
     }
 
     void pathWithVelocityCallback(const PathWithVelocity::ConstSharedPtr &path)
@@ -179,7 +168,14 @@ private:
                 RCLCPP_WARN(this->get_logger(), "Path empty. Sample skipped.");
                 return;
             }
-            auto tf = tf_buffer_.lookupTransform("base_link", path->header.frame_id,
+            if (!tf_buffer_.canTransform(target_frame_, path->header.frame_id,
+                                         scan->header.stamp, rclcpp::Duration::from_seconds(0.1))) {
+                RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 5000,
+                                     "TF lookup failed between %s and %s", target_frame_.c_str(),
+                                     path->header.frame_id.c_str());
+                return;
+            }
+            auto tf = tf_buffer_.lookupTransform(target_frame_, path->header.frame_id,
                                                   scan->header.stamp, rclcpp::Duration::from_seconds(0.1));
             rclcpp::Time start_time = path->header.stamp;
             for (const auto &ps : path->poses) {
@@ -262,7 +258,6 @@ private:
     // Subscribers and cached messages
     rclcpp::Subscription<LaserScan>::SharedPtr laser_scan_sub_;
     rclcpp::Subscription<PolarGrid>::SharedPtr polar_grid_sub_;
-    rclcpp::Subscription<Path>::SharedPtr path_sub_;
     rclcpp::Subscription<PathWithVelocity>::SharedPtr path_with_velocity_sub_;
 
     LaserScan::ConstSharedPtr latest_scan_;
@@ -277,6 +272,7 @@ private:
     bool normalize_ {false};
     bool forward_only_ {false};
     int downsample_step_ {1};
+    std::string target_frame_ {"base_link"};
     size_t sample_count_ {0};
 
     size_t range_count_ {0};
