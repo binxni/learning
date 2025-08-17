@@ -5,9 +5,6 @@
 #include <tf2_ros/transform_listener.h>
 #include <tf2_ros/buffer.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
-#include <message_filters/subscriber.h>
-#include <message_filters/synchronizer.h>
-#include <message_filters/sync_policies/approximate_time.h>
 #include <fstream>
 #include <vector>
 #include <string>
@@ -38,13 +35,15 @@ public:
             return;
         }
 
-        laser_scan_sub_.subscribe(this, "scan");
-        polar_grid_sub_.subscribe(this, "polar_grid");
-        path_sub_.subscribe(this, "planned_path_with_velocity");
-
-        sync_ = std::make_shared<Synchronizer>(SyncPolicy(10), laser_scan_sub_, polar_grid_sub_, path_sub_);
-        sync_->registerCallback(std::bind(&DataLoggerNode::syncCallback, this,
-                                          std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+        laser_scan_sub_ = this->create_subscription<LaserScan>(
+            "scan", rclcpp::SensorDataQoS(),
+            std::bind(&DataLoggerNode::scanCallback, this, std::placeholders::_1));
+        polar_grid_sub_ = this->create_subscription<PolarGrid>(
+            "polar_grid", rclcpp::SystemDefaultsQoS(),
+            std::bind(&DataLoggerNode::gridCallback, this, std::placeholders::_1));
+        path_sub_ = this->create_subscription<Path>(
+            "planned_path_with_velocity", rclcpp::SystemDefaultsQoS(),
+            std::bind(&DataLoggerNode::pathCallback, this, std::placeholders::_1));
 
         RCLCPP_INFO(this->get_logger(), "Data Logger Node initialized. Logging to %s", output_csv_file_.c_str());
     }
@@ -57,11 +56,9 @@ public:
     }
 
 private:
-    using LaserScan  = sensor_msgs::msg::LaserScan;
-    using PolarGrid  = global_to_polar_cpp::msg::PolarGrid;
-    using Path       = nav_msgs::msg::Path;
-    using SyncPolicy = message_filters::sync_policies::ApproximateTime<LaserScan, PolarGrid, Path>;
-    using Synchronizer = message_filters::Synchronizer<SyncPolicy>;
+    using LaserScan = sensor_msgs::msg::LaserScan;
+    using PolarGrid = global_to_polar_cpp::msg::PolarGrid;
+    using Path      = nav_msgs::msg::Path;
 
     void writeHeader()
     {
@@ -91,6 +88,25 @@ private:
             return range_max;
         }
         return normalize_ ? value / range_max : value;
+    }
+
+    void scanCallback(const LaserScan::ConstSharedPtr &scan)
+    {
+        latest_scan_ = scan;
+    }
+
+    void gridCallback(const PolarGrid::ConstSharedPtr &grid)
+    {
+        latest_grid_ = grid;
+    }
+
+    void pathCallback(const Path::ConstSharedPtr &path)
+    {
+        if (!latest_scan_ || !latest_grid_) {
+            RCLCPP_WARN(this->get_logger(), "Missing cached scan or polar grid. Sample skipped.");
+            return;
+        }
+        syncCallback(latest_scan_, latest_grid_, path);
     }
 
     void syncCallback(const LaserScan::ConstSharedPtr &scan,
@@ -214,11 +230,13 @@ private:
         }
     }
 
-    // Subscribers and synchronizer
-    message_filters::Subscriber<LaserScan> laser_scan_sub_;
-    message_filters::Subscriber<PolarGrid> polar_grid_sub_;
-    message_filters::Subscriber<Path> path_sub_;
-    std::shared_ptr<Synchronizer> sync_;
+    // Subscribers and cached messages
+    rclcpp::Subscription<LaserScan>::SharedPtr laser_scan_sub_;
+    rclcpp::Subscription<PolarGrid>::SharedPtr polar_grid_sub_;
+    rclcpp::Subscription<Path>::SharedPtr path_sub_;
+
+    LaserScan::ConstSharedPtr latest_scan_;
+    PolarGrid::ConstSharedPtr latest_grid_;
 
     tf2_ros::Buffer tf_buffer_;
     tf2_ros::TransformListener tf_listener_;
