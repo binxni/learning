@@ -3,7 +3,7 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     params_global = {
-        'path_csv_file': 'path.csv',
+        'path_csv_file': '/home/subin/learning/src/global_to_polar_cpp/line/slam_cent.csv',
         'lookahead_points': 20,
         'search_window': 10,
     }

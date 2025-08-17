@@ -1,6 +1,0 @@
-setup.py
-global_to_polar_cpp/__init__.py
-global_to_polar_cpp.egg-info/PKG-INFO
-global_to_polar_cpp.egg-info/SOURCES.txt
-global_to_polar_cpp.egg-info/dependency_links.txt
-global_to_polar_cpp.egg-info/top_level.txt
