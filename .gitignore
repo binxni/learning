@@ -1,5 +1,3 @@
-/install
-/build
-/logs
-/f1tenth_gym_ros
-/basecode_follow_the_gap
+**/install
+**/build
+**/logs

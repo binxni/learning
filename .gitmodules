@@ -7,3 +7,6 @@
 [submodule "src/f1tenth_gym_ros"]
 	path = src/f1tenth_gym_ros
 	url = https://github.com/f1tenth/f1tenth_gym_ros.git
+[submodule "src/LocalPlanning_Learning"]
+	path = src/LocalPlanning_Learning
+	url = https://github.com/binxni/LocalPlanning_Learning.git
