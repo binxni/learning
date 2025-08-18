@@ -8,6 +8,7 @@
 
 // Custom message
 #include "global_to_polar_cpp/msg/polar_grid.hpp"
+#include "planning_custom_msgs/msg/path_with_velocity.hpp"
 #include "f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
 #include <ament_index_cpp/get_package_share_directory.hpp>
 
@@ -44,6 +45,7 @@ public:
             std::bind(&DataLoggerNode::polarGridCallback, this, std::placeholders::_1));
 
         path_with_velocity_sub_ =
+            this->create_subscription<planning_custom_msgs::msg::PathWithVelocity>(
             this->create_subscription<f1tenth_planning_custom_msgs::msg::PathWithVelocity>(
                 "/planned_path_with_velocity", 10,
                 std::bind(&DataLoggerNode::pathWithVelocityCallback, this,
@@ -105,7 +107,10 @@ private:
         grid_received_ = true;
     }
 
+
+    void pathWithVelocityCallback(const planning_custom_msgs::msg::PathWithVelocity::SharedPtr msg)
     void pathWithVelocityCallback(const f1tenth_planning_custom_msgs::msg::PathWithVelocity::SharedPtr msg)
+
     {
         last_path_ = msg;
         path_received_ = true;
@@ -158,13 +163,19 @@ private:
 
     // Subscribers
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr laser_scan_sub_;
-    rclcpp::Subscription<global_to_polar_cpp::msg::PolarGrid>::SharedPtr polar_grid_sub_;
+    rclcpp::Subscription<global_to_polar_cpp::msg::PolarGrid>::SharedPtr polar_grid_sub_;  
+    rclcpp::Subscription<planning_custom_msgs::msg::PathWithVelocity>::SharedPtr path_with_velocity_sub_;
     rclcpp::Subscription<f1tenth_planning_custom_msgs::msg::PathWithVelocity>::SharedPtr path_with_velocity_sub_;
+
 
     // Data storage
     sensor_msgs::msg::LaserScan::SharedPtr last_scan_;
     global_to_polar_cpp::msg::PolarGrid::SharedPtr last_grid_;
+
+    planning_custom_msgs::msg::PathWithVelocity::SharedPtr last_path_;
+
     f1tenth_planning_custom_msgs::msg::PathWithVelocity::SharedPtr last_path_;
+
     bool scan_received_;
     bool grid_received_;
     bool path_received_;

@@ -17,6 +17,7 @@
   <depend>sensor_msgs</depend>
   <depend>tf2</depend>
   <depend>tf2_ros</depend>
+  <depend>planning_custom_msgs</depend>
   <depend>f1tenth_planning_custom_msgs</depend>
   <depend>ament_index_cpp</depend>
 
