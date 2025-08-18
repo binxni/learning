@@ -1,0 +1,744 @@
+[0.000000] (-) TimerEvent: {}
+[0.000160] (planning_custom_msgs) JobQueued: {'identifier': 'planning_custom_msgs', 'dependencies': OrderedDict()}
+[0.000237] (global_to_polar_cpp) JobQueued: {'identifier': 'global_to_polar_cpp', 'dependencies': OrderedDict([('planning_custom_msgs', '/home/subin/learning_code/install/planning_custom_msgs')])}
+[0.000256] (planning_custom_msgs) JobStarted: {'identifier': 'planning_custom_msgs'}
+[0.005050] (planning_custom_msgs) JobProgress: {'identifier': 'planning_custom_msgs', 'progress': 'cmake'}
+[0.005612] (planning_custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/subin/learning_code/src/f1tenth_planning_custom_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/subin/learning_code/install/planning_custom_msgs'], 'cwd': '/home/subin/learning_code/build/planning_custom_msgs', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'subin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/subin'), ('OLDPWD', '/home/subin/learning_code/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1400'), ('SYSTEMD_EXEC_PID', '1511'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6815'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/subin/learning_code/install:/home/subin/f1tenth_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'subin'), ('JOURNAL_STREAM', '8:27099'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'subin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/subin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/subin:@/tmp/.ICE-unix/1485,unix/subin:/tmp/.ICE-unix/1485'), ('INVOCATION_ID', 'f8a9f3cdebbc428bbd71c4ddfee6db71'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W6MRB3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:aed67500-d98c-4d4d-ac15-0b50cf8ea328'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/subin/learning_code/build/planning_custom_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/subin/f1tenth_ws/install/slam_toolbox/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/build/f1tenth_gym_ros:/home/subin/f1tenth_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[0.074822] (planning_custom_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.098704] (-) TimerEvent: {}
+[0.127364] (planning_custom_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.132125] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.186304] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.190279] (planning_custom_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.190445] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.190678] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.192497] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.198778] (-) TimerEvent: {}
+[0.242333] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.245968] (planning_custom_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.246165] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.246424] (planning_custom_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.248507] (planning_custom_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.298872] (-) TimerEvent: {}
+[0.329865] (planning_custom_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.373937] (planning_custom_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.389632] (planning_custom_msgs) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.2.2 (/opt/ros/humble/share/builtin_interfaces/cmake)\n'}
+[0.398942] (-) TimerEvent: {}
+[0.407479] (planning_custom_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.410278] (planning_custom_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.414610] (planning_custom_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.420798] (planning_custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.437934] (planning_custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.438000] (planning_custom_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.444432] (planning_custom_msgs) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.460936] (planning_custom_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.499022] (-) TimerEvent: {}
+[0.601951] (-) TimerEvent: {}
+[0.634085] (planning_custom_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[0.702037] (-) TimerEvent: {}
+[0.806084] (-) TimerEvent: {}
+[0.843223] (planning_custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.906168] (-) TimerEvent: {}
+[0.926736] (planning_custom_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.937391] (planning_custom_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[0.938445] (planning_custom_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[0.951451] (planning_custom_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[0.951550] (planning_custom_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.951586] (planning_custom_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[0.951612] (planning_custom_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[0.961279] (planning_custom_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[0.995022] (planning_custom_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.005642] (planning_custom_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.006116] (planning_custom_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.006164] (-) TimerEvent: {}
+[1.007941] (planning_custom_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.031891] (planning_custom_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.039312] (planning_custom_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/subin/learning_code/build/planning_custom_msgs\n'}
+[1.045544] (planning_custom_msgs) CommandEnded: {'returncode': 0}
+[1.047632] (planning_custom_msgs) JobProgress: {'identifier': 'planning_custom_msgs', 'progress': 'build'}
+[1.047691] (planning_custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/subin/learning_code/build/planning_custom_msgs', '--', '-j4', '-l4'], 'cwd': '/home/subin/learning_code/build/planning_custom_msgs', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'subin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/subin'), ('OLDPWD', '/home/subin/learning_code/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1400'), ('SYSTEMD_EXEC_PID', '1511'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6815'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/subin/learning_code/install:/home/subin/f1tenth_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'subin'), ('JOURNAL_STREAM', '8:27099'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'subin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/subin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/subin:@/tmp/.ICE-unix/1485,unix/subin:/tmp/.ICE-unix/1485'), ('INVOCATION_ID', 'f8a9f3cdebbc428bbd71c4ddfee6db71'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W6MRB3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:aed67500-d98c-4d4d-ac15-0b50cf8ea328'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/subin/learning_code/build/planning_custom_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/subin/f1tenth_ws/install/slam_toolbox/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/build/f1tenth_gym_ros:/home/subin/f1tenth_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[1.064186] (planning_custom_msgs) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.068270] (planning_custom_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.070876] (planning_custom_msgs) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_symlink_planning_custom_msgs\n'}
+[1.106261] (-) TimerEvent: {}
+[1.201923] (planning_custom_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.202388] (planning_custom_msgs) StdoutLine: {'line': b'creating planning_custom_msgs.egg-info\n'}
+[1.202583] (planning_custom_msgs) StdoutLine: {'line': b'writing planning_custom_msgs.egg-info/PKG-INFO\n'}
+[1.203589] (planning_custom_msgs) StdoutLine: {'line': b'writing dependency_links to planning_custom_msgs.egg-info/dependency_links.txt\n'}
+[1.203796] (planning_custom_msgs) StdoutLine: {'line': b'writing top-level names to planning_custom_msgs.egg-info/top_level.txt\n'}
+[1.203977] (planning_custom_msgs) StdoutLine: {'line': b"writing manifest file 'planning_custom_msgs.egg-info/SOURCES.txt'\n"}
+[1.205127] (planning_custom_msgs) StdoutLine: {'line': b"reading manifest file 'planning_custom_msgs.egg-info/SOURCES.txt'\n"}
+[1.205565] (planning_custom_msgs) StdoutLine: {'line': b"writing manifest file 'planning_custom_msgs.egg-info/SOURCES.txt'\n"}
+[1.206327] (-) TimerEvent: {}
+[1.220049] (planning_custom_msgs) StdoutLine: {'line': b'[  3%] Built target ament_cmake_python_build_planning_custom_msgs_egg\n'}
+[1.306798] (-) TimerEvent: {}
+[1.355735] (planning_custom_msgs) StdoutLine: {'line': b'[  3%] Built target planning_custom_msgs__cpp\n'}
+[1.360100] (planning_custom_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.360258] (planning_custom_msgs) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.361871] (planning_custom_msgs) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.365189] (planning_custom_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/wall_collision__functions.c.o\x1b[0m\n'}
+[1.397258] (planning_custom_msgs) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/path_point__functions.c.o\x1b[0m\n'}
+[1.406878] (-) TimerEvent: {}
+[1.421417] (planning_custom_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/path_with_velocity__functions.c.o\x1b[0m\n'}
+[1.446867] (planning_custom_msgs) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_c.dir/rosidl_generator_c/planning_custom_msgs/msg/detail/path_point_array__functions.c.o\x1b[0m\n'}
+[1.489662] (planning_custom_msgs) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking C shared library libplanning_custom_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[1.506968] (-) TimerEvent: {}
+[1.528297] (planning_custom_msgs) StdoutLine: {'line': b'[ 18%] Built target planning_custom_msgs__rosidl_generator_c\n'}
+[1.532515] (planning_custom_msgs) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.575767] (planning_custom_msgs) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/wall_collision__type_support.cpp.o\x1b[0m\n'}
+[1.607079] (-) TimerEvent: {}
+[1.644425] (planning_custom_msgs) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/wall_collision__type_support.cpp.o\x1b[0m\n'}
+[1.686109] (planning_custom_msgs) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/wall_collision__type_support.cpp.o\x1b[0m\n'}
+[1.707246] (-) TimerEvent: {}
+[1.757298] (planning_custom_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/path_point__type_support.cpp.o\x1b[0m\n'}
+[1.807336] (-) TimerEvent: {}
+[1.907668] (-) TimerEvent: {}
+[1.913796] (planning_custom_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/wall_collision__type_support_c.cpp.o\x1b[0m\n'}
+[1.958137] (planning_custom_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/path_with_velocity__type_support.cpp.o\x1b[0m\n'}
+[1.964974] (planning_custom_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/path_point__type_support.cpp.o\x1b[0m\n'}
+[2.007736] (-) TimerEvent: {}
+[2.018992] (planning_custom_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/path_point__type_support.cpp.o\x1b[0m\n'}
+[2.083275] (planning_custom_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/planning_custom_msgs/msg/path_point_array__type_support.cpp.o\x1b[0m\n'}
+[2.107837] (-) TimerEvent: {}
+[2.171080] (planning_custom_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/path_point__type_support_c.cpp.o\x1b[0m\n'}
+[2.207961] (-) TimerEvent: {}
+[2.254562] (planning_custom_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/path_with_velocity__type_support.cpp.o\x1b[0m\n'}
+[2.260187] (planning_custom_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/path_with_velocity__type_support.cpp.o\x1b[0m\n'}
+[2.277501] (planning_custom_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32m\x1b[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.298312] (planning_custom_msgs) StdoutLine: {'line': b'[ 43%] Built target planning_custom_msgs__rosidl_typesupport_cpp\n'}
+[2.302784] (planning_custom_msgs) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.308037] (-) TimerEvent: {}
+[2.368031] (planning_custom_msgs) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/path_with_velocity__type_support_c.cpp.o\x1b[0m\n'}
+[2.408143] (-) TimerEvent: {}
+[2.481832] (planning_custom_msgs) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/planning_custom_msgs/msg/detail/path_point_array__type_support.cpp.o\x1b[0m\n'}
+[2.508271] (-) TimerEvent: {}
+[2.509769] (planning_custom_msgs) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/planning_custom_msgs/msg/detail/dds_fastrtps/path_point_array__type_support.cpp.o\x1b[0m\n'}
+[2.573517] (planning_custom_msgs) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/planning_custom_msgs/msg/detail/path_point_array__type_support_c.cpp.o\x1b[0m\n'}
+[2.608377] (-) TimerEvent: {}
+[2.610762] (planning_custom_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/wall_collision__type_support.c.o\x1b[0m\n'}
+[2.630150] (planning_custom_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/path_point__type_support.c.o\x1b[0m\n'}
+[2.664963] (planning_custom_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/path_with_velocity__type_support.c.o\x1b[0m\n'}
+[2.681773] (planning_custom_msgs) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.684492] (planning_custom_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/planning_custom_msgs/msg/detail/path_point_array__type_support.c.o\x1b[0m\n'}
+[2.708493] (-) TimerEvent: {}
+[2.733487] (planning_custom_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking C shared library libplanning_custom_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.734862] (planning_custom_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.738588] (planning_custom_msgs) StdoutLine: {'line': b'[ 65%] Built target planning_custom_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.744922] (planning_custom_msgs) StdoutLine: {'line': b'[ 67%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.751896] (planning_custom_msgs) StdoutLine: {'line': b'[ 67%] Built target planning_custom_msgs__rosidl_typesupport_introspection_c\n'}
+[2.769956] (planning_custom_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.785692] (planning_custom_msgs) StdoutLine: {'line': b'[ 69%] Built target planning_custom_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.805083] (planning_custom_msgs) StdoutLine: {'line': b'[ 69%] Built target planning_custom_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.809292] (-) TimerEvent: {}
+[2.913927] (-) TimerEvent: {}
+[2.935998] (planning_custom_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/path_point__type_support.cpp.o\x1b[0m\n'}
+[2.936163] (planning_custom_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/path_with_velocity__type_support.cpp.o\x1b[0m\n'}
+[2.936225] (planning_custom_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/wall_collision__type_support.cpp.o\x1b[0m\n'}
+[2.938886] (planning_custom_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/planning_custom_msgs/msg/path_point_array__type_support.cpp.o\x1b[0m\n'}
+[2.964673] (planning_custom_msgs) StdoutLine: {'line': b'[ 78%] \x1b[32m\x1b[1mLinking CXX shared library libplanning_custom_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.983052] (planning_custom_msgs) StdoutLine: {'line': b'[ 78%] Built target planning_custom_msgs__rosidl_typesupport_c\n'}
+[2.990740] (planning_custom_msgs) StdoutLine: {'line': b'[ 78%] Built target planning_custom_msgs\n'}
+[2.998198] (planning_custom_msgs) StdoutLine: {'line': b'[ 80%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[3.014024] (-) TimerEvent: {}
+[3.114921] (-) TimerEvent: {}
+[3.219616] (-) TimerEvent: {}
+[3.320542] (-) TimerEvent: {}
+[3.363233] (planning_custom_msgs) StdoutLine: {'line': b'[ 80%] Built target planning_custom_msgs__py\n'}
+[3.371202] (planning_custom_msgs) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_wall_collision_s.c.o\x1b[0m\n'}
+[3.371426] (planning_custom_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_path_point_s.c.o\x1b[0m\n'}
+[3.371468] (planning_custom_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_path_with_velocity_s.c.o\x1b[0m\n'}
+[3.374110] (planning_custom_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_generator_py.dir/rosidl_generator_py/planning_custom_msgs/msg/_path_point_array_s.c.o\x1b[0m\n'}
+[3.420683] (-) TimerEvent: {}
+[3.429257] (planning_custom_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/libplanning_custom_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.447147] (planning_custom_msgs) StdoutLine: {'line': b'[ 89%] Built target planning_custom_msgs__rosidl_generator_py\n'}
+[3.455130] (planning_custom_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.455231] (planning_custom_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.456148] (planning_custom_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/planning_custom_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.510277] (planning_custom_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.510401] (planning_custom_msgs) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.511243] (planning_custom_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[3.520767] (-) TimerEvent: {}
+[3.530400] (planning_custom_msgs) StdoutLine: {'line': b'[100%] Built target planning_custom_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.530493] (planning_custom_msgs) StdoutLine: {'line': b'[100%] Built target planning_custom_msgs__rosidl_typesupport_c__pyext\n'}
+[3.530881] (planning_custom_msgs) StdoutLine: {'line': b'[100%] Built target planning_custom_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.537420] (planning_custom_msgs) CommandEnded: {'returncode': 0}
+[3.538444] (planning_custom_msgs) JobProgress: {'identifier': 'planning_custom_msgs', 'progress': 'install'}
+[3.542177] (planning_custom_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/subin/learning_code/build/planning_custom_msgs'], 'cwd': '/home/subin/learning_code/build/planning_custom_msgs', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'subin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/subin'), ('OLDPWD', '/home/subin/learning_code/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1400'), ('SYSTEMD_EXEC_PID', '1511'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6815'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/subin/learning_code/install:/home/subin/f1tenth_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'subin'), ('JOURNAL_STREAM', '8:27099'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'subin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/subin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/subin:@/tmp/.ICE-unix/1485,unix/subin:/tmp/.ICE-unix/1485'), ('INVOCATION_ID', 'f8a9f3cdebbc428bbd71c4ddfee6db71'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W6MRB3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:aed67500-d98c-4d4d-ac15-0b50cf8ea328'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/subin/learning_code/build/planning_custom_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/subin/f1tenth_ws/install/slam_toolbox/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/build/f1tenth_gym_ros:/home/subin/f1tenth_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[3.544908] (planning_custom_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.545313] (planning_custom_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[3.545476] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/ament_index/resource_index/rosidl_interfaces/planning_custom_msgs\n'}
+[3.549222] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__functions.h\n'}
+[3.552645] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__struct.h\n'}
+[3.555939] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__type_support.h\n'}
+[3.558886] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__functions.h\n'}
+[3.562091] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__struct.h\n'}
+[3.564774] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__type_support.h\n'}
+[3.567651] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__functions.h\n'}
+[3.570476] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__struct.h\n'}
+[3.573325] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__type_support.h\n'}
+[3.576053] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__functions.h\n'}
+[3.578880] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__struct.h\n'}
+[3.581646] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__type_support.h\n'}
+[3.584291] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point.h\n'}
+[3.587385] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point_array.h\n'}
+[3.590322] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_with_velocity.h\n'}
+[3.593030] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.595765] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/wall_collision.h\n'}
+[3.598659] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/library_path.sh\n'}
+[3.601634] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/library_path.dsv\n'}
+[3.604507] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_fastrtps_c.h\n'}
+[3.607332] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_fastrtps_c.h\n'}
+[3.610191] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_fastrtps_c.h\n'}
+[3.612876] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_fastrtps_c.h\n'}
+[3.615566] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.618720] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__builder.hpp\n'}
+[3.621355] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__struct.hpp\n'}
+[3.621413] (-) TimerEvent: {}
+[3.624442] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__traits.hpp\n'}
+[3.627438] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__type_support.hpp\n'}
+[3.630181] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__builder.hpp\n'}
+[3.632822] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__struct.hpp\n'}
+[3.635706] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__traits.hpp\n'}
+[3.638437] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__type_support.hpp\n'}
+[3.641069] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__builder.hpp\n'}
+[3.643827] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__struct.hpp\n'}
+[3.646531] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__traits.hpp\n'}
+[3.649484] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__type_support.hpp\n'}
+[3.653350] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__builder.hpp\n'}
+[3.656265] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__struct.hpp\n'}
+[3.659270] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__traits.hpp\n'}
+[3.662676] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__type_support.hpp\n'}
+[3.665630] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point.hpp\n'}
+[3.668446] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_point_array.hpp\n'}
+[3.671416] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/path_with_velocity.hpp\n'}
+[3.674464] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[3.678056] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/wall_collision.hpp\n'}
+[3.681024] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.684441] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.687102] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.690535] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.693259] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.696249] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_introspection_c.h\n'}
+[3.700820] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_introspection_c.h\n'}
+[3.705803] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_introspection_c.h\n'}
+[3.708646] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_introspection_c.h\n'}
+[3.711500] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.714761] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.717908] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_point_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.720727] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/path_with_velocity__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.721485] (-) TimerEvent: {}
+[3.723741] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/include/planning_custom_msgs/planning_custom_msgs/msg/detail/wall_collision__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.727073] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/pythonpath.sh\n'}
+[3.730901] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/pythonpath.dsv\n'}
+[3.734028] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[3.736784] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[3.739599] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[3.742441] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[3.745454] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/__init__.py\n'}
+[3.748250] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[3.757450] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.761655] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/_planning_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.764354] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/libplanning_custom_msgs__rosidl_generator_py.so\n'}
+[3.767385] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/__init__.py\n'}
+[3.770270] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_point.py\n'}
+[3.773494] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_point_array.py\n'}
+[3.776237] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_point_array_s.c\n'}
+[3.778978] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_point_s.c\n'}
+[3.781813] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_with_velocity.py\n'}
+[3.784450] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_with_velocity_s.c\n'}
+[3.787206] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_wall_collision.py\n'}
+[3.790911] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_wall_collision_s.c\n'}
+[3.793759] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.796929] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.799765] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.803654] (planning_custom_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.803698] (planning_custom_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.803831] (planning_custom_msgs) StdoutLine: {'line': b'-- Up-to-date symlink: /home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/planning_custom_msgs_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[3.803938] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/WallCollision.idl\n'}
+[3.806823] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPoint.idl\n'}
+[3.809940] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathWithVelocity.idl\n'}
+[3.812731] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPointArray.idl\n'}
+[3.815600] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/WallCollision.msg\n'}
+[3.818703] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPoint.msg\n'}
+[3.821503] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathWithVelocity.msg\n'}
+[3.821549] (-) TimerEvent: {}
+[3.824366] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/msg/PathPointArray.msg\n'}
+[3.827550] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/ament_index/resource_index/package_run_dependencies/planning_custom_msgs\n'}
+[3.830428] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/ament_index/resource_index/parent_prefix_path/planning_custom_msgs\n'}
+[3.833270] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/ament_prefix_path.sh\n'}
+[3.835926] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/ament_prefix_path.dsv\n'}
+[3.838827] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/path.sh\n'}
+[3.841582] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/environment/path.dsv\n'}
+[3.844214] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.bash\n'}
+[3.847162] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.sh\n'}
+[3.850313] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.zsh\n'}
+[3.858628] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/local_setup.dsv\n'}
+[3.862463] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/package.dsv\n'}
+[3.865442] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/ament_index/resource_index/packages/planning_custom_msgs\n'}
+[3.868184] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[3.871000] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.873819] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.876480] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.879333] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.882287] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.885095] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.887909] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgsConfig.cmake\n'}
+[3.891925] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgsConfig-version.cmake\n'}
+[3.894866] (planning_custom_msgs) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/package.xml\n'}
+[3.897701] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_c.so\n'}
+[3.897894] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_c.so" to ""\n'}
+[3.898010] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[3.898129] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[3.898226] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.898393] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[3.898465] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_c.so\n'}
+[3.898584] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.898718] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_c.so\n'}
+[3.898792] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_c.so" to ""\n'}
+[3.898833] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[3.899020] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.899143] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_cpp.so\n'}
+[3.899680] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[3.918858] (planning_custom_msgs) StdoutLine: {'line': b"Listing '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs'...\n"}
+[3.918931] (planning_custom_msgs) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/__init__.py'...\n"}
+[3.918960] (planning_custom_msgs) StdoutLine: {'line': b"Listing '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg'...\n"}
+[3.918985] (planning_custom_msgs) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/__init__.py'...\n"}
+[3.919009] (planning_custom_msgs) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_point.py'...\n"}
+[3.919032] (planning_custom_msgs) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_point_array.py'...\n"}
+[3.919055] (planning_custom_msgs) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_path_with_velocity.py'...\n"}
+[3.919078] (planning_custom_msgs) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages/planning_custom_msgs/msg/_wall_collision.py'...\n"}
+[3.921630] (-) TimerEvent: {}
+[3.921825] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_py.so\n'}
+[3.921999] (planning_custom_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/planning_custom_msgs/lib/libplanning_custom_msgs__rosidl_generator_py.so" to ""\n'}
+[3.922042] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_cExport.cmake\n'}
+[3.922080] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.922176] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.922222] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.922319] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_cppExport.cmake\n'}
+[3.922417] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.922453] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.922794] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.922919] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.923022] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cExport.cmake\n'}
+[3.923054] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.923811] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.923945] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.923985] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[3.924008] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/planning_custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.924342] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_pyExport.cmake\n'}
+[3.924471] (planning_custom_msgs) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake/export_planning_custom_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.926170] (planning_custom_msgs) CommandEnded: {'returncode': 0}
+[3.936504] (planning_custom_msgs) JobEnded: {'identifier': 'planning_custom_msgs', 'rc': 0}
+[3.936698] (global_to_polar_cpp) JobStarted: {'identifier': 'global_to_polar_cpp'}
+[3.940150] (global_to_polar_cpp) JobProgress: {'identifier': 'global_to_polar_cpp', 'progress': 'cmake'}
+[3.940941] (global_to_polar_cpp) Command: {'cmd': ['/usr/bin/cmake', '/home/subin/learning_code/src/global_to_polar_cpp', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/subin/learning_code/install/global_to_polar_cpp'], 'cwd': '/home/subin/learning_code/build/global_to_polar_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'subin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/subin/learning_code/install/planning_custom_msgs/lib:/home/subin/f1tenth_ws/install/slam_toolbox/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/subin'), ('OLDPWD', '/home/subin/learning_code/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1400'), ('SYSTEMD_EXEC_PID', '1511'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6815'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/subin/learning_code/install:/home/subin/f1tenth_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'subin'), ('JOURNAL_STREAM', '8:27099'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'subin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/subin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/subin:@/tmp/.ICE-unix/1485,unix/subin:/tmp/.ICE-unix/1485'), ('INVOCATION_ID', 'f8a9f3cdebbc428bbd71c4ddfee6db71'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W6MRB3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/subin/learning_code/install/planning_custom_msgs:/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:aed67500-d98c-4d4d-ac15-0b50cf8ea328'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/subin/learning_code/build/global_to_polar_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/install/slam_toolbox/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/build/f1tenth_gym_ros:/home/subin/f1tenth_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/subin/learning_code/install/planning_custom_msgs:/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[3.970526] (global_to_polar_cpp) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[4.006098] (global_to_polar_cpp) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[4.009610] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.021732] (-) TimerEvent: {}
+[4.052428] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.056334] (global_to_polar_cpp) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.056595] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.056868] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.058542] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.097844] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.101476] (global_to_polar_cpp) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[4.101630] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.101897] (global_to_polar_cpp) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.103384] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[4.121833] (-) TimerEvent: {}
+[4.175908] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[4.209102] (global_to_polar_cpp) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[4.221923] (-) TimerEvent: {}
+[4.224039] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[4.246399] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[4.249126] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[4.254210] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[4.261502] (global_to_polar_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.270453] (global_to_polar_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.294215] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[4.295708] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[4.322000] (-) TimerEvent: {}
+[4.332636] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[4.348108] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[4.370342] (global_to_polar_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[4.374806] (global_to_polar_cpp) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[4.406570] (global_to_polar_cpp) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[4.406786] (global_to_polar_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[4.422082] (-) TimerEvent: {}
+[4.436328] (global_to_polar_cpp) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[4.436940] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.466138] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rclpy: 3.3.17 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[4.467058] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[4.484487] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[4.498773] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found tf2: 0.25.15 (/opt/ros/humble/share/tf2/cmake)\n'}
+[4.509180] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[4.510346] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found planning_custom_msgs: 1.0.0 (/home/subin/learning_code/install/planning_custom_msgs/share/planning_custom_msgs/cmake)\n'}
+[4.522457] (-) TimerEvent: {}
+[4.622666] (-) TimerEvent: {}
+[4.667547] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[4.722746] (-) TimerEvent: {}
+[4.822919] (-) TimerEvent: {}
+[4.910911] (global_to_polar_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.924338] (-) TimerEvent: {}
+[5.010771] (global_to_polar_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.021507] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[5.022473] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[5.024446] (-) TimerEvent: {}
+[5.034982] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[5.035143] (global_to_polar_cpp) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.035201] (global_to_polar_cpp) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[5.035231] (global_to_polar_cpp) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[5.044943] (global_to_polar_cpp) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.089888] (global_to_polar_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[5.115697] (global_to_polar_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[5.124175] (global_to_polar_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/subin/learning_code/build/global_to_polar_cpp\n'}
+[5.124517] (-) TimerEvent: {}
+[5.130754] (global_to_polar_cpp) CommandEnded: {'returncode': 0}
+[5.131263] (global_to_polar_cpp) JobProgress: {'identifier': 'global_to_polar_cpp', 'progress': 'build'}
+[5.132046] (global_to_polar_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/subin/learning_code/build/global_to_polar_cpp', '--', '-j4', '-l4'], 'cwd': '/home/subin/learning_code/build/global_to_polar_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'subin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/subin/learning_code/install/planning_custom_msgs/lib:/home/subin/f1tenth_ws/install/slam_toolbox/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/subin'), ('OLDPWD', '/home/subin/learning_code/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1400'), ('SYSTEMD_EXEC_PID', '1511'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6815'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/subin/learning_code/install:/home/subin/f1tenth_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'subin'), ('JOURNAL_STREAM', '8:27099'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'subin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/subin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/subin:@/tmp/.ICE-unix/1485,unix/subin:/tmp/.ICE-unix/1485'), ('INVOCATION_ID', 'f8a9f3cdebbc428bbd71c4ddfee6db71'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W6MRB3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/subin/learning_code/install/planning_custom_msgs:/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:aed67500-d98c-4d4d-ac15-0b50cf8ea328'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/subin/learning_code/build/global_to_polar_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/install/slam_toolbox/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/build/f1tenth_gym_ros:/home/subin/f1tenth_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/subin/learning_code/install/planning_custom_msgs:/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[5.149655] (global_to_polar_cpp) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[5.153702] (global_to_polar_cpp) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[5.166011] (global_to_polar_cpp) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_symlink_global_to_polar_cpp\n'}
+[5.224621] (-) TimerEvent: {}
+[5.292790] (global_to_polar_cpp) StdoutLine: {'line': b'running egg_info\n'}
+[5.293061] (global_to_polar_cpp) StdoutLine: {'line': b'creating global_to_polar_cpp.egg-info\n'}
+[5.293302] (global_to_polar_cpp) StdoutLine: {'line': b'writing global_to_polar_cpp.egg-info/PKG-INFO\n'}
+[5.293414] (global_to_polar_cpp) StdoutLine: {'line': b'writing dependency_links to global_to_polar_cpp.egg-info/dependency_links.txt\n'}
+[5.293566] (global_to_polar_cpp) StdoutLine: {'line': b'writing top-level names to global_to_polar_cpp.egg-info/top_level.txt\n'}
+[5.293693] (global_to_polar_cpp) StdoutLine: {'line': b"writing manifest file 'global_to_polar_cpp.egg-info/SOURCES.txt'\n"}
+[5.294661] (global_to_polar_cpp) StdoutLine: {'line': b"reading manifest file 'global_to_polar_cpp.egg-info/SOURCES.txt'\n"}
+[5.294983] (global_to_polar_cpp) StdoutLine: {'line': b"writing manifest file 'global_to_polar_cpp.egg-info/SOURCES.txt'\n"}
+[5.308344] (global_to_polar_cpp) StdoutLine: {'line': b'[  5%] Built target global_to_polar_cpp__cpp\n'}
+[5.310238] (global_to_polar_cpp) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_global_to_polar_cpp_egg\n'}
+[5.312606] (global_to_polar_cpp) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/global_to_polar_cpp__rosidl_generator_c.dir/rosidl_generator_c/global_to_polar_cpp/msg/detail/polar_grid__functions.c.o\x1b[0m\n'}
+[5.312699] (global_to_polar_cpp) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.313516] (global_to_polar_cpp) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.314440] (global_to_polar_cpp) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[5.324698] (-) TimerEvent: {}
+[5.339465] (global_to_polar_cpp) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libglobal_to_polar_cpp__rosidl_generator_c.so\x1b[0m\n'}
+[5.358522] (global_to_polar_cpp) StdoutLine: {'line': b'[ 20%] Built target global_to_polar_cpp__rosidl_generator_c\n'}
+[5.362969] (global_to_polar_cpp) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.424801] (-) TimerEvent: {}
+[5.437091] (global_to_polar_cpp) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/global_to_polar_cpp/msg/polar_grid__type_support.cpp.o\x1b[0m\n'}
+[5.445675] (global_to_polar_cpp) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/global_to_polar_cpp/msg/detail/polar_grid__type_support.cpp.o\x1b[0m\n'}
+[5.500934] (global_to_polar_cpp) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/global_to_polar_cpp/msg/detail/polar_grid__type_support_c.cpp.o\x1b[0m\n'}
+[5.506901] (global_to_polar_cpp) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/global_to_polar_cpp/msg/detail/dds_fastrtps/polar_grid__type_support.cpp.o\x1b[0m\n'}
+[5.524907] (-) TimerEvent: {}
+[5.568176] (global_to_polar_cpp) StdoutLine: {'line': b'[ 37%] \x1b[32m\x1b[1mLinking CXX shared library libglobal_to_polar_cpp__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[5.588047] (global_to_polar_cpp) StdoutLine: {'line': b'[ 37%] Built target global_to_polar_cpp__rosidl_typesupport_cpp\n'}
+[5.592686] (global_to_polar_cpp) StdoutLine: {'line': b'[ 40%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[5.625013] (-) TimerEvent: {}
+[5.649776] (global_to_polar_cpp) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library libglobal_to_polar_cpp__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[5.683867] (global_to_polar_cpp) StdoutLine: {'line': b'[ 42%] Built target global_to_polar_cpp__rosidl_typesupport_introspection_cpp\n'}
+[5.684210] (global_to_polar_cpp) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library libglobal_to_polar_cpp__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[5.688200] (global_to_polar_cpp) StdoutLine: {'line': b'[ 48%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.721040] (global_to_polar_cpp) StdoutLine: {'line': b'[ 48%] Built target global_to_polar_cpp__rosidl_typesupport_fastrtps_c\n'}
+[5.725102] (-) TimerEvent: {}
+[5.729835] (global_to_polar_cpp) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/global_to_polar_node.dir/src/globToPolar.cpp.o\x1b[0m\n'}
+[5.736837] (global_to_polar_cpp) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/global_to_polar_cpp/msg/detail/polar_grid__type_support.c.o\x1b[0m\n'}
+[5.757458] (global_to_polar_cpp) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking C shared library libglobal_to_polar_cpp__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.791716] (global_to_polar_cpp) StdoutLine: {'line': b'[ 57%] Built target global_to_polar_cpp__rosidl_typesupport_introspection_c\n'}
+[5.794203] (global_to_polar_cpp) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX shared library libglobal_to_polar_cpp__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.799982] (global_to_polar_cpp) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/data_logger_node.dir/src/dataLoggerNode.cpp.o\x1b[0m\n'}
+[5.825236] (-) TimerEvent: {}
+[5.828683] (global_to_polar_cpp) StdoutLine: {'line': b'[ 62%] Built target global_to_polar_cpp__rosidl_typesupport_fastrtps_cpp\n'}
+[5.831864] (global_to_polar_cpp) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_c.dir/rosidl_typesupport_c/global_to_polar_cpp/msg/polar_grid__type_support.cpp.o\x1b[0m\n'}
+[5.847445] (global_to_polar_cpp) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking CXX shared library libglobal_to_polar_cpp__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.878566] (global_to_polar_cpp) StdoutLine: {'line': b'[ 68%] Built target global_to_polar_cpp__rosidl_typesupport_c\n'}
+[5.889567] (global_to_polar_cpp) StdoutLine: {'line': b'[ 68%] Built target global_to_polar_cpp\n'}
+[5.898171] (global_to_polar_cpp) StdoutLine: {'line': b'[ 71%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.925334] (-) TimerEvent: {}
+[6.025587] (-) TimerEvent: {}
+[6.095325] (global_to_polar_cpp) StdoutLine: {'line': b'[ 71%] Built target global_to_polar_cpp__py\n'}
+[6.105691] (global_to_polar_cpp) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding C object CMakeFiles/global_to_polar_cpp__rosidl_generator_py.dir/rosidl_generator_py/global_to_polar_cpp/msg/_polar_grid_s.c.o\x1b[0m\n'}
+[6.125715] (-) TimerEvent: {}
+[6.213336] (global_to_polar_cpp) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/global_to_polar_cpp/libglobal_to_polar_cpp__rosidl_generator_py.so\x1b[0m\n'}
+[6.225823] (-) TimerEvent: {}
+[6.244405] (global_to_polar_cpp) StdoutLine: {'line': b'[ 77%] Built target global_to_polar_cpp__rosidl_generator_py\n'}
+[6.255529] (global_to_polar_cpp) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/global_to_polar_cpp/_global_to_polar_cpp_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.259681] (global_to_polar_cpp) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/global_to_polar_cpp/_global_to_polar_cpp_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.325927] (-) TimerEvent: {}
+[6.346532] (global_to_polar_cpp) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[6.383258] (global_to_polar_cpp) StdoutLine: {'line': b'[ 85%] Built target global_to_polar_cpp__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.396573] (global_to_polar_cpp) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[6.396759] (global_to_polar_cpp) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/global_to_polar_cpp__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/global_to_polar_cpp/_global_to_polar_cpp_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.424802] (global_to_polar_cpp) StdoutLine: {'line': b'[ 91%] Built target global_to_polar_cpp__rosidl_typesupport_introspection_c__pyext\n'}
+[6.426001] (-) TimerEvent: {}
+[6.510123] (global_to_polar_cpp) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[6.526182] (-) TimerEvent: {}
+[6.559365] (global_to_polar_cpp) StdoutLine: {'line': b'[ 94%] Built target global_to_polar_cpp__rosidl_typesupport_c__pyext\n'}
+[6.626282] (-) TimerEvent: {}
+[6.727239] (-) TimerEvent: {}
+[6.827812] (-) TimerEvent: {}
+[6.928174] (-) TimerEvent: {}
+[7.028802] (-) TimerEvent: {}
+[7.129424] (-) TimerEvent: {}
+[7.230244] (-) TimerEvent: {}
+[7.330707] (-) TimerEvent: {}
+[7.431097] (-) TimerEvent: {}
+[7.532389] (-) TimerEvent: {}
+[7.637450] (-) TimerEvent: {}
+[7.737866] (-) TimerEvent: {}
+[7.838305] (-) TimerEvent: {}
+[7.939006] (-) TimerEvent: {}
+[8.039492] (-) TimerEvent: {}
+[8.141000] (-) TimerEvent: {}
+[8.246410] (-) TimerEvent: {}
+[8.346784] (-) TimerEvent: {}
+[8.447162] (-) TimerEvent: {}
+[8.548529] (-) TimerEvent: {}
+[8.651906] (-) TimerEvent: {}
+[8.758361] (-) TimerEvent: {}
+[8.859151] (-) TimerEvent: {}
+[8.959843] (-) TimerEvent: {}
+[9.060647] (-) TimerEvent: {}
+[9.162303] (-) TimerEvent: {}
+[9.262717] (-) TimerEvent: {}
+[9.363588] (-) TimerEvent: {}
+[9.464582] (-) TimerEvent: {}
+[9.565412] (-) TimerEvent: {}
+[9.666270] (-) TimerEvent: {}
+[9.766839] (-) TimerEvent: {}
+[9.868590] (-) TimerEvent: {}
+[9.974127] (-) TimerEvent: {}
+[10.074769] (-) TimerEvent: {}
+[10.175410] (-) TimerEvent: {}
+[10.279476] (-) TimerEvent: {}
+[10.381491] (-) TimerEvent: {}
+[10.486439] (-) TimerEvent: {}
+[10.588931] (-) TimerEvent: {}
+[10.693936] (-) TimerEvent: {}
+[10.794880] (-) TimerEvent: {}
+[10.895898] (-) TimerEvent: {}
+[11.000924] (-) TimerEvent: {}
+[11.104746] (-) TimerEvent: {}
+[11.205842] (-) TimerEvent: {}
+[11.310641] (-) TimerEvent: {}
+[11.414367] (-) TimerEvent: {}
+[11.519059] (-) TimerEvent: {}
+[11.624320] (-) TimerEvent: {}
+[11.729495] (-) TimerEvent: {}
+[11.834257] (-) TimerEvent: {}
+[11.938889] (-) TimerEvent: {}
+[12.039610] (-) TimerEvent: {}
+[12.141267] (-) TimerEvent: {}
+[12.242139] (-) TimerEvent: {}
+[12.347260] (-) TimerEvent: {}
+[12.452189] (-) TimerEvent: {}
+[12.552732] (-) TimerEvent: {}
+[12.655022] (-) TimerEvent: {}
+[12.756477] (-) TimerEvent: {}
+[12.861554] (-) TimerEvent: {}
+[12.964181] (-) TimerEvent: {}
+[13.065475] (-) TimerEvent: {}
+[13.166538] (-) TimerEvent: {}
+[13.269565] (-) TimerEvent: {}
+[13.370335] (-) TimerEvent: {}
+[13.475322] (-) TimerEvent: {}
+[13.580119] (-) TimerEvent: {}
+[13.680484] (-) TimerEvent: {}
+[13.786035] (-) TimerEvent: {}
+[13.896389] (-) TimerEvent: {}
+[14.000733] (-) TimerEvent: {}
+[14.104168] (-) TimerEvent: {}
+[14.205887] (-) TimerEvent: {}
+[14.307249] (-) TimerEvent: {}
+[14.407858] (-) TimerEvent: {}
+[14.508309] (-) TimerEvent: {}
+[14.608967] (-) TimerEvent: {}
+[14.709530] (-) TimerEvent: {}
+[14.810236] (-) TimerEvent: {}
+[14.910982] (-) TimerEvent: {}
+[15.018062] (-) TimerEvent: {}
+[15.159743] (-) TimerEvent: {}
+[15.268985] (-) TimerEvent: {}
+[15.370693] (-) TimerEvent: {}
+[15.471614] (-) TimerEvent: {}
+[15.573029] (-) TimerEvent: {}
+[15.673650] (-) TimerEvent: {}
+[15.774176] (-) TimerEvent: {}
+[15.876228] (-) TimerEvent: {}
+[15.978593] (-) TimerEvent: {}
+[16.079920] (-) TimerEvent: {}
+[16.180752] (-) TimerEvent: {}
+[16.281736] (-) TimerEvent: {}
+[16.383023] (-) TimerEvent: {}
+[16.485183] (-) TimerEvent: {}
+[16.590467] (-) TimerEvent: {}
+[16.693352] (-) TimerEvent: {}
+[16.793833] (-) TimerEvent: {}
+[16.895081] (-) TimerEvent: {}
+[16.997506] (-) TimerEvent: {}
+[17.103172] (-) TimerEvent: {}
+[17.203786] (-) TimerEvent: {}
+[17.242529] (global_to_polar_cpp) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking CXX executable global_to_polar_node\x1b[0m\n'}
+[17.304665] (-) TimerEvent: {}
+[17.409801] (-) TimerEvent: {}
+[17.510546] (-) TimerEvent: {}
+[17.612435] (-) TimerEvent: {}
+[17.713649] (-) TimerEvent: {}
+[17.779365] (global_to_polar_cpp) StdoutLine: {'line': b'[ 97%] Built target global_to_polar_node\n'}
+[17.814947] (-) TimerEvent: {}
+[17.917474] (-) TimerEvent: {}
+[18.019959] (-) TimerEvent: {}
+[18.120356] (-) TimerEvent: {}
+[18.222434] (-) TimerEvent: {}
+[18.325797] (-) TimerEvent: {}
+[18.429983] (-) TimerEvent: {}
+[18.530248] (-) TimerEvent: {}
+[18.630615] (-) TimerEvent: {}
+[18.730999] (-) TimerEvent: {}
+[18.835721] (-) TimerEvent: {}
+[18.940464] (-) TimerEvent: {}
+[19.045207] (-) TimerEvent: {}
+[19.145630] (-) TimerEvent: {}
+[19.246864] (-) TimerEvent: {}
+[19.347673] (-) TimerEvent: {}
+[19.448752] (-) TimerEvent: {}
+[19.550146] (-) TimerEvent: {}
+[19.650412] (-) TimerEvent: {}
+[19.750668] (-) TimerEvent: {}
+[19.855591] (-) TimerEvent: {}
+[19.959177] (-) TimerEvent: {}
+[20.063789] (-) TimerEvent: {}
+[20.166135] (-) TimerEvent: {}
+[20.268556] (-) TimerEvent: {}
+[20.370763] (-) TimerEvent: {}
+[20.473434] (-) TimerEvent: {}
+[20.574387] (-) TimerEvent: {}
+[20.678016] (-) TimerEvent: {}
+[20.778674] (-) TimerEvent: {}
+[20.883365] (-) TimerEvent: {}
+[20.987847] (-) TimerEvent: {}
+[21.088743] (-) TimerEvent: {}
+[21.193374] (-) TimerEvent: {}
+[21.298067] (-) TimerEvent: {}
+[21.398381] (-) TimerEvent: {}
+[21.503122] (-) TimerEvent: {}
+[21.604112] (-) TimerEvent: {}
+[21.704524] (-) TimerEvent: {}
+[21.809086] (-) TimerEvent: {}
+[21.909684] (-) TimerEvent: {}
+[21.929912] (global_to_polar_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable data_logger_node\x1b[0m\n'}
+[22.010544] (-) TimerEvent: {}
+[22.114122] (-) TimerEvent: {}
+[22.214389] (-) TimerEvent: {}
+[22.317820] (-) TimerEvent: {}
+[22.403048] (global_to_polar_cpp) StdoutLine: {'line': b'[100%] Built target data_logger_node\n'}
+[22.418196] (global_to_polar_cpp) CommandEnded: {'returncode': 0}
+[22.419856] (-) TimerEvent: {}
+[22.420829] (global_to_polar_cpp) JobProgress: {'identifier': 'global_to_polar_cpp', 'progress': 'install'}
+[22.423478] (global_to_polar_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/subin/learning_code/build/global_to_polar_cpp'], 'cwd': '/home/subin/learning_code/build/global_to_polar_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'subin'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/subin/learning_code/install/planning_custom_msgs/lib:/home/subin/f1tenth_ws/install/slam_toolbox/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/subin'), ('OLDPWD', '/home/subin/learning_code/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1400'), ('SYSTEMD_EXEC_PID', '1511'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '6815'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/subin/learning_code/install:/home/subin/f1tenth_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'subin'), ('JOURNAL_STREAM', '8:27099'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'subin'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/subin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/subin:@/tmp/.ICE-unix/1485,unix/subin:/tmp/.ICE-unix/1485'), ('INVOCATION_ID', 'f8a9f3cdebbc428bbd71c4ddfee6db71'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.W6MRB3'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/subin/learning_code/install/planning_custom_msgs:/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:aed67500-d98c-4d4d-ac15-0b50cf8ea328'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/subin/learning_code/build/global_to_polar_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/subin/learning_code/install/planning_custom_msgs/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/install/slam_toolbox/local/lib/python3.10/dist-packages:/home/subin/f1tenth_ws/build/f1tenth_gym_ros:/home/subin/f1tenth_ws/install/f1tenth_gym_ros/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/subin/learning_code/install/planning_custom_msgs:/home/subin/f1tenth_ws/install/slam_toolbox:/home/subin/f1tenth_ws/install/f1tenth_gym_ros:/opt/ros/humble')]), 'shell': False}
+[22.428627] (global_to_polar_cpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[22.429274] (global_to_polar_cpp) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[22.429845] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/ament_index/resource_index/rosidl_interfaces/global_to_polar_cpp\n'}
+[22.434243] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__functions.h\n'}
+[22.440140] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__struct.h\n'}
+[22.444107] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__type_support.h\n'}
+[22.447424] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/polar_grid.h\n'}
+[22.453861] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/rosidl_generator_c__visibility_control.h\n'}
+[22.457098] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/library_path.sh\n'}
+[22.461926] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/library_path.dsv\n'}
+[22.465388] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__rosidl_typesupport_fastrtps_c.h\n'}
+[22.468253] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[22.471315] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__builder.hpp\n'}
+[22.474192] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__struct.hpp\n'}
+[22.477021] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__traits.hpp\n'}
+[22.479939] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__type_support.hpp\n'}
+[22.483134] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/polar_grid.hpp\n'}
+[22.486042] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[22.489002] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[22.491972] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[22.494987] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__rosidl_typesupport_introspection_c.h\n'}
+[22.497967] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[22.500931] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/include/global_to_polar_cpp/global_to_polar_cpp/msg/detail/polar_grid__rosidl_typesupport_introspection_cpp.hpp\n'}
+[22.503826] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/pythonpath.sh\n'}
+[22.506768] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/pythonpath.dsv\n'}
+[22.509759] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[22.512613] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[22.515492] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[22.518320] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[22.519923] (-) TimerEvent: {}
+[22.522535] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/__init__.py\n'}
+[22.525328] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/_global_to_polar_cpp_s.ep.rosidl_typesupport_c.c\n'}
+[22.528062] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/_global_to_polar_cpp_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[22.531085] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/_global_to_polar_cpp_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[22.533985] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.536785] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.539758] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.542576] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/libglobal_to_polar_cpp__rosidl_generator_py.so\n'}
+[22.545352] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/msg/__init__.py\n'}
+[22.548269] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/msg/_polar_grid.py\n'}
+[22.562567] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/msg/_polar_grid_s.c\n'}
+[22.567189] (global_to_polar_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.567305] (global_to_polar_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.567452] (global_to_polar_cpp) StdoutLine: {'line': b'-- Up-to-date symlink: /home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/global_to_polar_cpp_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[22.567556] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/msg/PolarGrid.idl\n'}
+[22.570854] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/msg/PolarGrid.msg\n'}
+[22.573828] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/lib/global_to_polar_cpp/global_to_polar_node\n'}
+[22.576653] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/lib/global_to_polar_cpp/data_logger_node\n'}
+[22.579891] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/ament_index/resource_index/package_run_dependencies/global_to_polar_cpp\n'}
+[22.583124] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/ament_index/resource_index/parent_prefix_path/global_to_polar_cpp\n'}
+[22.586190] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/ament_prefix_path.sh\n'}
+[22.589074] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/ament_prefix_path.dsv\n'}
+[22.591903] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/path.sh\n'}
+[22.594931] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/environment/path.dsv\n'}
+[22.597892] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/local_setup.bash\n'}
+[22.600983] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/local_setup.sh\n'}
+[22.603864] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/local_setup.zsh\n'}
+[22.606786] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/local_setup.dsv\n'}
+[22.609648] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/package.dsv\n'}
+[22.612368] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/ament_index/resource_index/packages/global_to_polar_cpp\n'}
+[22.615245] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/rosidl_cmake-extras.cmake\n'}
+[22.618598] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[22.619993] (-) TimerEvent: {}
+[22.621698] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[22.624535] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[22.628090] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[22.632005] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[22.635667] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[22.638624] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cppConfig.cmake\n'}
+[22.641427] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cppConfig-version.cmake\n'}
+[22.644146] (global_to_polar_cpp) StdoutLine: {'line': b'-- Symlinking: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/package.xml\n'}
+[22.647191] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_generator_c.so\n'}
+[22.647494] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_generator_c.so" to ""\n'}
+[22.647539] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_fastrtps_c.so\n'}
+[22.647691] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[22.647762] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_fastrtps_cpp.so\n'}
+[22.647994] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[22.648026] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_introspection_c.so\n'}
+[22.648465] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_introspection_c.so" to ""\n'}
+[22.648530] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_c.so\n'}
+[22.648959] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_c.so" to ""\n'}
+[22.648996] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_introspection_cpp.so\n'}
+[22.649334] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[22.649367] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_cpp.so\n'}
+[22.649469] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_typesupport_cpp.so" to ""\n'}
+[22.680141] (global_to_polar_cpp) StdoutLine: {'line': b"Listing '/home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp'...\n"}
+[22.680432] (global_to_polar_cpp) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/__init__.py'...\n"}
+[22.680479] (global_to_polar_cpp) StdoutLine: {'line': b"Listing '/home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/msg'...\n"}
+[22.680511] (global_to_polar_cpp) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/msg/__init__.py'...\n"}
+[22.680535] (global_to_polar_cpp) StdoutLine: {'line': b"Compiling '/home/subin/learning_code/install/global_to_polar_cpp/local/lib/python3.10/dist-packages/global_to_polar_cpp/msg/_polar_grid.py'...\n"}
+[22.683463] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_generator_py.so\n'}
+[22.683812] (global_to_polar_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/subin/learning_code/install/global_to_polar_cpp/lib/libglobal_to_polar_cpp__rosidl_generator_py.so" to ""\n'}
+[22.683956] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_generator_cExport.cmake\n'}
+[22.684113] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_generator_cExport-noconfig.cmake\n'}
+[22.684326] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[22.684540] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[22.684653] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_generator_cppExport.cmake\n'}
+[22.684754] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[22.684829] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[22.684915] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_introspection_cExport.cmake\n'}
+[22.685041] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[22.685234] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_cExport.cmake\n'}
+[22.685272] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[22.685344] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[22.685428] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[22.685509] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_cppExport.cmake\n'}
+[22.685592] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/global_to_polar_cpp__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[22.685659] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_generator_pyExport.cmake\n'}
+[22.685742] (global_to_polar_cpp) StdoutLine: {'line': b'-- Installing: /home/subin/learning_code/install/global_to_polar_cpp/share/global_to_polar_cpp/cmake/export_global_to_polar_cpp__rosidl_generator_pyExport-noconfig.cmake\n'}
+[22.688307] (global_to_polar_cpp) CommandEnded: {'returncode': 0}
+[22.697570] (global_to_polar_cpp) JobEnded: {'identifier': 'global_to_polar_cpp', 'rc': 0}
+[22.698254] (-) EventReactorShutdown: {}
