@@ -64,6 +64,13 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Install resource files such as the default CSV map so they are
+# available via ament_index_cpp::get_package_share_directory().
+install(DIRECTORY
+  line
+  DESTINATION share/${PROJECT_NAME}
+)
+
 
 ament_export_dependencies(rosidl_default_runtime)
 ament_package()
