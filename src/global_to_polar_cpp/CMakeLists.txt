@@ -13,7 +13,14 @@ find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
-find_package(planning_custom_msgs REQUIRED)
+find_package(planning_custom_msgs QUIET)
+if(NOT planning_custom_msgs_FOUND)
+  find_package(f1tenth_planning_custom_msgs REQUIRED)
+  set(path_msgs_pkg f1tenth_planning_custom_msgs)
+else()
+  set(path_msgs_pkg planning_custom_msgs)
+endif()
+find_package(ament_index_cpp REQUIRED)
 
 # ===================================================================
 # 1. 사용자 정의 메시지 파일
@@ -37,6 +44,7 @@ ament_target_dependencies(global_to_polar_node
   std_msgs
   nav_msgs
   tf2
+  ament_index_cpp
 )
 
 # data_logger_node 실행 파일
@@ -45,7 +53,8 @@ ament_target_dependencies(data_logger_node
   rclcpp
   std_msgs
   sensor_msgs
-  planning_custom_msgs
+  ${path_msgs_pkg}
+  ament_index_cpp
 )
 
 # 사용자 정의 메시지 타입 링크
@@ -63,4 +72,5 @@ install(TARGETS
 
 
 ament_export_dependencies(rosidl_default_runtime)
+ament_export_dependencies(${path_msgs_pkg})
 ament_package()

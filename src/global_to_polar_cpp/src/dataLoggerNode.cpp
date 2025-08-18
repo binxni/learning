@@ -7,8 +7,17 @@
 #include <iomanip> // For std::setprecision
 
 // Custom message
-#include "../global_to_polar_cpp/msg/polar_grid.hpp"
-#include "../f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
+#include "global_to_polar_cpp/msg/polar_grid.hpp"
+#if __has_include("planning_custom_msgs/msg/path_with_velocity.hpp")
+#include "planning_custom_msgs/msg/path_with_velocity.hpp"
+namespace path_msgs = planning_custom_msgs;
+#elif __has_include("f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp")
+#include "f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
+namespace path_msgs = f1tenth_planning_custom_msgs;
+#else
+#error "PathWithVelocity message definition not found"
+#endif
+#include <ament_index_cpp/get_package_share_directory.hpp>
 
 class DataLoggerNode : public rclcpp::Node
 {
@@ -16,7 +25,11 @@ public:
     DataLoggerNode() : Node("data_logger_node"), scan_received_(false), grid_received_(false), path_received_(false)
     {
         // Declare and get parameter for the output CSV file path
-        output_csv_file_ = this->declare_parameter<std::string>("output_csv_file", "/home/subin/learning_code/src/global_to_polar_cpp/dataSet/datalog.csv");
+        const std::string default_csv_path =
+            ament_index_cpp::get_package_share_directory("global_to_polar_cpp") +
+            "/dataSet/datalog.csv";
+        output_csv_file_ =
+            this->declare_parameter<std::string>("output_csv_file", default_csv_path);
 
         // Open the CSV file for writing
         csv_file_.open(output_csv_file_, std::ios::out | std::ios::trunc);
@@ -38,9 +51,11 @@ public:
             "/polar_grid", 10,
             std::bind(&DataLoggerNode::polarGridCallback, this, std::placeholders::_1));
 
-        path_point_array_sub_ = this->create_subscription<f1tenth_planning_custom_msgs::msg::PathWithVelocity>(
-            "/planned_path_with_velocity", 10,
-            std::bind(&DataLoggerNode::pathPointArrayCallback, this, std::placeholders::_1));
+        path_with_velocity_sub_ =
+            this->create_subscription<path_msgs::msg::PathWithVelocity>(
+                "/planned_path_with_velocity", 10,
+                std::bind(&DataLoggerNode::pathWithVelocityCallback, this,
+                          std::placeholders::_1));
 
         RCLCPP_INFO(this->get_logger(), "Data Logger Node initialized. Logging to %s", output_csv_file_.c_str());
     }
@@ -63,7 +78,7 @@ private:
         for (int i = 0; i < 1080; ++i) {
             csv_file_ << "grid_" << i << ",";
         }
-        // PathPointArray headers (16 points with x, y, v, yaw)
+        // PathWithVelocity headers (16 points with x, y, v, yaw)
         for (int i = 0; i < 16; ++i) {
             csv_file_ << "x" << (i+1) << ",";
             csv_file_ << "y" << (i+1) << ",";
@@ -75,10 +90,12 @@ private:
 
     void laserScanCallback(const sensor_msgs::msg::LaserScan::SharedPtr msg)
     {
-        // We assume the laser scan also has 1081 points.
+        // We assume the laser scan has 1080 points.
         // If not, you might need to adjust the logic or header.
         if (msg->ranges.size() != 1080) {
-             RCLCPP_WARN_ONCE(this->get_logger(), "Received LaserScan with %zu points, expected 1081. CSV columns might not align.", msg->ranges.size());
+             RCLCPP_WARN_ONCE(this->get_logger(),
+                              "Received LaserScan with %zu points, expected 1080. CSV columns might not align.",
+                              msg->ranges.size());
         }
         last_scan_ = msg;
         scan_received_ = true;
@@ -88,17 +105,19 @@ private:
     void polarGridCallback(const global_to_polar_cpp::msg::PolarGrid::SharedPtr msg)
     {
         if (msg->ranges.size() != 1080) {
-            RCLCPP_WARN_ONCE(this->get_logger(), "Received PolarGrid with %zu points, expected 1081. CSV columns might not align.", msg->ranges.size());
+            RCLCPP_WARN_ONCE(this->get_logger(),
+                             "Received PolarGrid with %zu points, expected 1080. CSV columns might not align.",
+                             msg->ranges.size());
         }
         last_grid_ = msg;
         grid_received_ = true;
     }
 
-    void pathPointArrayCallback(const planning_custom_msgs::msg::PathPointArray::SharedPtr msg)
+    void pathWithVelocityCallback(const path_msgs::msg::PathWithVelocity::SharedPtr msg)
     {
         last_path_ = msg;
         path_received_ = true;
-        RCLCPP_INFO(this->get_logger(), "Received PathPointArray with %zu points", msg->points.size());
+        RCLCPP_INFO(this->get_logger(), "Received PathWithVelocity with %zu points", msg->points.size());
     }
 
     void writeData()
@@ -121,7 +140,7 @@ private:
             csv_file_ << last_grid_->ranges[i] << ",";
         }
 
-        // Write PathPointArray data (16 points with x, y, v, yaw)
+        // Write PathWithVelocity data (16 points with x, y, v, yaw)
         for (int i = 0; i < 16; ++i) {
             if (i < static_cast<int>(last_path_->points.size())) {
                 const auto& point = last_path_->points[i];
@@ -148,12 +167,12 @@ private:
     // Subscribers
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr laser_scan_sub_;
     rclcpp::Subscription<global_to_polar_cpp::msg::PolarGrid>::SharedPtr polar_grid_sub_;
-    rclcpp::Subscription<planning_custom_msgs::msg::PathPointArray>::SharedPtr path_point_array_sub_;
+    rclcpp::Subscription<path_msgs::msg::PathWithVelocity>::SharedPtr path_with_velocity_sub_;
 
     // Data storage
     sensor_msgs::msg::LaserScan::SharedPtr last_scan_;
     global_to_polar_cpp::msg::PolarGrid::SharedPtr last_grid_;
-    planning_custom_msgs::msg::PathPointArray::SharedPtr last_path_;
+    path_msgs::msg::PathWithVelocity::SharedPtr last_path_;
     bool scan_received_;
     bool grid_received_;
     bool path_received_;
