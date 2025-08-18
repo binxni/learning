@@ -5,11 +5,12 @@
 #include <vector>
 #include <string>
 #include <iomanip> // For std::setprecision
+#include <filesystem>
+#include <stdexcept>
 
 // Custom message
 #include "global_to_polar_cpp/msg/polar_grid.hpp"
 #include "f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
-#include <ament_index_cpp/get_package_share_directory.hpp>
 
 class DataLoggerNode : public rclcpp::Node
 {
@@ -18,17 +19,26 @@ public:
     {
         // Declare and get parameter for the output CSV file path
         const std::string default_csv_path =
-            ament_index_cpp::get_package_share_directory("global_to_polar_cpp") +
-            "/dataSet/datalog.csv";
+            (std::filesystem::path(__FILE__).parent_path().parent_path() /
+             "dataSet/datalog.csv").string();
         output_csv_file_ =
             this->declare_parameter<std::string>("output_csv_file", default_csv_path);
+
+        // Ensure the directory exists before opening the file
+        auto parent_dir = std::filesystem::path(output_csv_file_).parent_path();
+        std::error_code ec;
+        std::filesystem::create_directories(parent_dir, ec);
+        if (ec) {
+            RCLCPP_WARN(this->get_logger(),
+                        "Failed to create directory %s: %s",
+                        parent_dir.c_str(), ec.message().c_str());
+        }
 
         // Open the CSV file for writing
         csv_file_.open(output_csv_file_, std::ios::out | std::ios::trunc);
         if (!csv_file_.is_open()) {
             RCLCPP_ERROR(this->get_logger(), "Failed to open output file: %s", output_csv_file_.c_str());
-            rclcpp::shutdown();
-            return;
+            throw std::runtime_error("Failed to open output file: " + output_csv_file_);
         }
 
         // Write the header row to the CSV file
@@ -180,7 +190,12 @@ private:
 int main(int argc, char** argv)
 {
     rclcpp::init(argc, argv);
-    rclcpp::spin(std::make_shared<DataLoggerNode>());
+    try {
+        rclcpp::spin(std::make_shared<DataLoggerNode>());
+    } catch (const std::exception& e) {
+        RCLCPP_ERROR(rclcpp::get_logger("data_logger_node"),
+                    "Exception caught: %s", e.what());
+    }
     rclcpp::shutdown();
     return 0;
 }

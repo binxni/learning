@@ -50,6 +50,7 @@ ament_target_dependencies(data_logger_node
   f1tenth_planning_custom_msgs
   ament_index_cpp
 )
+target_compile_features(data_logger_node PRIVATE cxx_std_17)
 
 # 사용자 정의 메시지 타입 링크
 target_link_libraries(global_to_polar_node "${cpp_typesupport_target}")
