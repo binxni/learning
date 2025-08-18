@@ -8,7 +8,7 @@
 
 // Custom message
 #include "global_to_polar_cpp/msg/polar_grid.hpp"
-#include "planning_custom_msgs/msg/path_point_array.hpp"
+#include "f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
 
 class DataLoggerNode : public rclcpp::Node
 {
@@ -38,7 +38,7 @@ public:
             "/polar_grid", 10,
             std::bind(&DataLoggerNode::polarGridCallback, this, std::placeholders::_1));
 
-        path_point_array_sub_ = this->create_subscription<planning_custom_msgs::msg::PathPointArray>(
+        path_point_array_sub_ = this->create_subscription<f1tenth_planning_custom_msgs::msg::PathWithVelocity>(
             "/planned_path_with_velocity", 10,
             std::bind(&DataLoggerNode::pathPointArrayCallback, this, std::placeholders::_1));
 
