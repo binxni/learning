@@ -5,5 +5,5 @@
 std_msgs/Header header
 
 # 거리(range) 값들을 담는 배열.
-# global_to_polar_node는 여기에 1081개의 float 값을 채웁니다.
+# global_to_polar_node는 여기에 1080개의 float 값을 채웁니다.
 float32[] ranges
