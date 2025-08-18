@@ -11,7 +11,6 @@
 // Custom message
 #include "global_to_polar_cpp/msg/polar_grid.hpp"
 #include "f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
-#include <ament_index_cpp/get_package_share_directory.hpp>
 
 class DataLoggerNode : public rclcpp::Node
 {
@@ -20,8 +19,8 @@ public:
     {
         // Declare and get parameter for the output CSV file path
         const std::string default_csv_path =
-            ament_index_cpp::get_package_share_directory("global_to_polar_cpp") +
-            "/dataSet/datalog.csv";
+            (std::filesystem::path(__FILE__).parent_path().parent_path() /
+             "dataSet/datalog.csv").string();
         output_csv_file_ =
             this->declare_parameter<std::string>("output_csv_file", default_csv_path);
 
