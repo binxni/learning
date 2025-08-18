@@ -1,5 +1,7 @@
-**/install/
-**/build/
-**/log/
-**/logs/
-rosbag/
+/build/
+/install/
+/log/
+/rosbag/          # 루트의 rosbag 폴더
+**/rosbag/**      # 어디에 있든 모든 rosbag 폴더
+*.db3             # rosbag DB3 파일까지 차단
+*.yaml

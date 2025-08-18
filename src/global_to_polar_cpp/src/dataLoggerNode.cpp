@@ -7,8 +7,8 @@
 #include <iomanip> // For std::setprecision
 
 // Custom message
-#include "global_to_polar_cpp/msg/polar_grid.hpp"
-#include "f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
+#include "../global_to_polar_cpp/msg/polar_grid.hpp"
+#include "../f1tenth_planning_custom_msgs/msg/path_with_velocity.hpp"
 
 class DataLoggerNode : public rclcpp::Node
 {
