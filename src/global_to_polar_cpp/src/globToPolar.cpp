@@ -24,7 +24,7 @@ public:
     GlobalToPolarNode() : Node("global_to_polar_node")
     {
         // 파라미터 선언 및 값 가져오기
-        std::string path_csv_file = this->declare_parameter<std::string>("path_csv_file", "/home/yongwoo/sim_ws/src/global_to_polar_cpp/line/slam_tool_box.csv");
+        std::string path_csv_file = this->declare_parameter<std::string>("path_csv_file", "/home/subin/learning_code/src/global_to_polar_cpp/line/slam_tool_box.csv");
         lookahead_points_ = this->declare_parameter<int>("lookahead_points", 20);
         search_window_ = this->declare_parameter<int>("search_window", 10);
 
@@ -37,7 +37,7 @@ public:
 
         // Subscriber (Odometry 정보 수신)
         odom_sub_ = this->create_subscription<nav_msgs::msg::Odometry>(
-            "/ego_racecar/odom", 10,
+            "/pf/pose/odom", 10,
             std::bind(&GlobalToPolarNode::odomCallback, this, std::placeholders::_1));
 
         // Publisher (PolarGrid 메시지 발행)
@@ -78,6 +78,9 @@ private:
         while (std::getline(file, line)) {
             std::stringstream ss(line);
             std::string x_str, y_str;
+            std::string tmp;
+
+            std::getline(ss, tmp, ',');
 
             // x_m, y_m 값만 읽고 나머지는 무시
             if (std::getline(ss, x_str, ',') && std::getline(ss, y_str, ',')) {
@@ -154,12 +157,12 @@ private:
         auto polar_grid_msg = global_to_polar_cpp::msg::PolarGrid();
         polar_grid_msg.header.stamp = this->get_clock()->now();
         polar_grid_msg.header.frame_id = "base_link"; // 로봇의 지역 좌표계
-        polar_grid_msg.ranges.resize(1081, 0.0f); // 1081개의 요소를 0으로 초기화
+        polar_grid_msg.ranges.resize(1080, 0.0f); // 1080개의 요소를 0으로 초기화
 
         // 극좌표 그리드의 각도 범위 정의 (-135도 ~ +135도)
         const double min_angle_rad = -135.0 * M_PI / 180.0;
         const double max_angle_rad = 135.0 * M_PI / 180.0;
-        const double angle_increment = (max_angle_rad - min_angle_rad) / (1081.0 - 1.0);
+        const double angle_increment = (max_angle_rad - min_angle_rad) / (1080.0 - 1.0);
 
         // 3. 전방 'lookahead_points_' 개수만큼의 경로점을 극좌표 그리드에 채우기
         for (int j = 0; j < lookahead_points_; ++j) {

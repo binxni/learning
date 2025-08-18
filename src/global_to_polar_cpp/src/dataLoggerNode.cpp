@@ -16,7 +16,7 @@ public:
     DataLoggerNode() : Node("data_logger_node"), scan_received_(false), grid_received_(false), path_received_(false)
     {
         // Declare and get parameter for the output CSV file path
-        output_csv_file_ = this->declare_parameter<std::string>("output_csv_file", "/home/yongwoo/sim_ws/src/global_to_polar_cpp/dataSet/datalog.csv");
+        output_csv_file_ = this->declare_parameter<std::string>("output_csv_file", "/home/subin/learning_code/src/global_to_polar_cpp/dataSet/datalog.csv");
 
         // Open the CSV file for writing
         csv_file_.open(output_csv_file_, std::ios::out | std::ios::trunc);
@@ -39,7 +39,7 @@ public:
             std::bind(&DataLoggerNode::polarGridCallback, this, std::placeholders::_1));
 
         path_point_array_sub_ = this->create_subscription<planning_custom_msgs::msg::PathPointArray>(
-            "/path_point_array", 10,
+            "/planned_path_with_velocity", 10,
             std::bind(&DataLoggerNode::pathPointArrayCallback, this, std::placeholders::_1));
 
         RCLCPP_INFO(this->get_logger(), "Data Logger Node initialized. Logging to %s", output_csv_file_.c_str());
@@ -55,12 +55,12 @@ public:
 private:
     void writeHeader()
     {
-        // LaserScan headers (assuming 1081 points)
-        for (int i = 0; i < 1081; ++i) {
+        // LaserScan headers (assuming 1080 points)
+        for (int i = 0; i < 1080; ++i) {
             csv_file_ << "scan_" << i << ",";
         }
-        // PolarGrid headers (1081 points)
-        for (int i = 0; i < 1081; ++i) {
+        // PolarGrid headers (1080 points)
+        for (int i = 0; i < 1080; ++i) {
             csv_file_ << "grid_" << i << ",";
         }
         // PathPointArray headers (16 points with x, y, v, yaw)
@@ -77,7 +77,7 @@ private:
     {
         // We assume the laser scan also has 1081 points.
         // If not, you might need to adjust the logic or header.
-        if (msg->ranges.size() != 1081) {
+        if (msg->ranges.size() != 1080) {
              RCLCPP_WARN_ONCE(this->get_logger(), "Received LaserScan with %zu points, expected 1081. CSV columns might not align.", msg->ranges.size());
         }
         last_scan_ = msg;
@@ -87,7 +87,7 @@ private:
 
     void polarGridCallback(const global_to_polar_cpp::msg::PolarGrid::SharedPtr msg)
     {
-        if (msg->ranges.size() != 1081) {
+        if (msg->ranges.size() != 1080) {
             RCLCPP_WARN_ONCE(this->get_logger(), "Received PolarGrid with %zu points, expected 1081. CSV columns might not align.", msg->ranges.size());
         }
         last_grid_ = msg;
