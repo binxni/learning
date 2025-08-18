@@ -9,6 +9,7 @@
 #include <sstream>
 #include <limits>
 #include <algorithm>
+#include <ament_index_cpp/get_package_share_directory.hpp>
 
 // 사용자 정의 메시지
 #include "global_to_polar_cpp/msg/polar_grid.hpp"
@@ -24,7 +25,11 @@ public:
     GlobalToPolarNode() : Node("global_to_polar_node")
     {
         // 파라미터 선언 및 값 가져오기
-        std::string path_csv_file = this->declare_parameter<std::string>("path_csv_file", "/home/subin/learning_code/src/global_to_polar_cpp/line/slam_tool_box.csv");
+        const std::string default_path_csv =
+            ament_index_cpp::get_package_share_directory("global_to_polar_cpp") +
+            "/line/slam_tool_box.csv";
+        std::string path_csv_file =
+            this->declare_parameter<std::string>("path_csv_file", default_path_csv);
         lookahead_points_ = this->declare_parameter<int>("lookahead_points", 20);
         search_window_ = this->declare_parameter<int>("search_window", 10);
 
@@ -184,10 +189,10 @@ private:
 
             // 경로점이 우리가 원하는 각도 범위 내에 있는지 확인
             if (relative_angle >= min_angle_rad && relative_angle <= max_angle_rad) {
-                // 1081개 배열에서 해당 각도에 맞는 인덱스 계산
+                // 1080개 배열에서 해당 각도에 맞는 인덱스 계산
                 int index = static_cast<int>(std::round((relative_angle - min_angle_rad) / angle_increment));
 
-                if (index >= 0 && index < 1081) {
+                if (index >= 0 && index < 1080) {
                     // 해당 인덱스가 비어있거나, 새로 계산된 점이 더 가까우면 거리 값을 업데이트
                     if (polar_grid_msg.ranges[index] == 0.0f || distance < polar_grid_msg.ranges[index]) {
                         polar_grid_msg.ranges[index] = static_cast<float>(distance);
