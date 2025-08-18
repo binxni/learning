@@ -14,6 +14,7 @@ find_package(sensor_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(planning_custom_msgs REQUIRED)
+find_package(f1tenth_planning_custom_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 
 # ===================================================================
@@ -48,6 +49,7 @@ ament_target_dependencies(data_logger_node
   std_msgs
   sensor_msgs
   planning_custom_msgs
+  f1tenth_planning_custom_msgs
   ament_index_cpp
 )
 
